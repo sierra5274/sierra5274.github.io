@@ -1,0 +1,1062 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>先锋成人资源站-高清影视聚合与使用指南</title>
+<meta name="description" content="先锋成人资源站聚焦高清影视与成人向内容的分类整理，提供影片索引、分级说明、播放体验指南、常见问题解答与用户实测反馈，帮助快速定位片源与了解使用规则。">
+<meta name="keywords" content="先锋成人资源站">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1d2b'/%3E%3Cpath d='M22 18l24 14-24 14z' fill='%23f0563c'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0f1118;
+  --bg-soft:#161a26;
+  --panel:#1b2030;
+  --panel-2:#232a3e;
+  --line:#2d3550;
+  --text:#e7ebf5;
+  --muted:#9aa4bf;
+  --brand:#f0563c;
+  --brand-soft:#ff8b6f;
+  --accent:#4db6c9;
+  --accent-2:#8f7cf0;
+  --ok:#5fc98b;
+  --warn:#e8b04b;
+  --r-s:6px;
+  --r-m:12px;
+  --r-l:20px;
+  --sp-1:6px;
+  --sp-2:12px;
+  --sp-3:20px;
+  --sp-4:32px;
+  --sp-5:52px;
+  --fs-1:12px;
+  --fs-2:13.5px;
+  --fs-3:15px;
+  --fs-4:18px;
+  --fs-5:24px;
+  --fs-6:34px;
+  --fs-7:46px;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --ann-h:38px;
+  --head-h:64px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--ann-h) + var(--head-h) + 12px)}
+body{
+  background:
+    radial-gradient(1100px 500px at 80% -10%,rgba(143,124,240,.16),transparent 60%),
+    radial-gradient(900px 420px at 10% 0%,rgba(240,86,60,.14),transparent 55%),
+    var(--bg);
+  color:var(--text);font-family:var(--font);font-size:var(--fs-3);
+  line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+ul,ol{list-style:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1220px,calc(100% - 40px));margin-inline:auto}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;z-index:200;background:var(--panel);padding:8px 14px;border-radius:var(--r-s)}
+
+/* 吸顶组 */
+.sticky-stack{position:sticky;top:0;z-index:90}
+.announce{
+  background:linear-gradient(90deg,#2a1a1c,#1c2030 45%,#1a2133);
+  border-bottom:1px solid var(--line);
+  height:var(--ann-h);display:flex;align-items:center;
+  font-size:var(--fs-1);letter-spacing:.02em;
+}
+.announce .wrap{display:flex;align-items:center;gap:10px;overflow:hidden;white-space:nowrap}
+.announce .dot{width:7px;height:7px;border-radius:50%;background:var(--brand);flex:none;box-shadow:0 0 0 3px rgba(240,86,60,.2)}
+.announce b{color:var(--brand-soft);font-weight:600}
+.announce .ann-list{display:flex;gap:26px;color:var(--muted);overflow:hidden}
+.announce a{color:var(--text);border-bottom:1px dashed var(--line)}
+.announce a:hover{color:var(--brand-soft)}
+
+.site-head{
+  background:rgba(15,17,24,.92);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);height:var(--head-h);
+}
+.head-inner{display:flex;align-items:center;gap:var(--sp-3);height:var(--head-h)}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand-text{font-size:var(--fs-4);font-weight:700;letter-spacing:.02em}
+.brand-text small{display:block;font-size:11px;font-weight:400;color:var(--muted);letter-spacing:.16em}
+.main-nav{display:flex;gap:4px;margin-left:var(--sp-2);flex:1;flex-wrap:nowrap;overflow:hidden}
+.main-nav a{
+  font-size:var(--fs-2);color:var(--muted);padding:8px 11px;border-radius:var(--r-s);
+  white-space:nowrap;transition:color .18s,background .18s;
+}
+.main-nav a:hover{color:var(--text);background:var(--panel-2)}
+.main-nav a.active{color:var(--brand-soft);background:rgba(240,86,60,.12)}
+.head-tools{display:flex;align-items:center;gap:8px;flex:none}
+.search{display:flex;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:var(--r-s);overflow:hidden}
+.search input{
+  background:transparent;border:0;color:var(--text);font-family:inherit;
+  padding:7px 10px;width:150px;font-size:var(--fs-2);
+}
+.search input::placeholder{color:#6f7a97}
+.search button{
+  background:transparent;border:0;color:var(--muted);cursor:pointer;
+  padding:7px 11px;font-size:var(--fs-2);font-family:inherit;
+}
+.search button:hover{color:var(--brand-soft)}
+.search-result{
+  position:absolute;top:calc(var(--head-h) + var(--ann-h) + 6px);
+  right:20px;width:320px;background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--r-m);box-shadow:var(--shadow);padding:8px;display:none;z-index:95;
+}
+.search-result.show{display:block}
+.search-result li{border-radius:var(--r-s)}
+.search-result li a{display:block;padding:8px 10px;font-size:var(--fs-2);color:var(--muted)}
+.search-result li a:hover{background:var(--panel-2);color:var(--text)}
+.search-result .empty{padding:10px;font-size:var(--fs-2);color:var(--muted)}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;border-radius:var(--r-s);
+  padding:8px 16px;font-size:var(--fs-2);font-weight:600;cursor:pointer;
+  border:1px solid transparent;transition:transform .18s,background .18s,color .18s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:#ff6c50}
+.btn-ghost{border-color:var(--line);color:var(--text);background:transparent}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.nav-toggle{
+  display:none;background:var(--panel);border:1px solid var(--line);color:var(--text);
+  width:38px;height:34px;border-radius:var(--r-s);cursor:pointer;font-size:14px;
+}
+
+/* 首屏 */
+.hero{position:relative;overflow:hidden;padding:var(--sp-5) 0 var(--sp-4);border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .85fr;gap:var(--sp-4);align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:var(--fs-1);
+  letter-spacing:.22em;color:var(--accent);border:1px solid rgba(77,182,201,.35);
+  padding:4px 12px;border-radius:999px;margin-bottom:18px;
+}
+.hero h1{font-size:var(--fs-7);line-height:1.16;letter-spacing:.01em;margin-bottom:16px}
+.hero h1 span{color:var(--brand-soft)}
+.hero-desc{color:var(--muted);font-size:var(--fs-3);max-width:56ch;margin-bottom:22px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
+.hero-stats div strong{display:block;font-size:var(--fs-5);color:var(--brand-soft);line-height:1.2}
+.hero-stats div span{font-size:var(--fs-1);color:var(--muted);letter-spacing:.06em}
+.hero-visual{position:relative;aspect-ratio:1/1;max-width:420px;justify-self:end;width:100%}
+.hero-visual svg{width:100%;height:100%}
+.orbit{animation:spin 46s linear infinite;transform-origin:210px 210px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* 内容布局 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:var(--sp-4);padding:var(--sp-4) 0 var(--sp-5);align-items:start}
+.main-col{display:flex;flex-direction:column;gap:var(--sp-4);min-width:0}
+.side-col{display:flex;flex-direction:column;gap:var(--sp-3);position:sticky;top:calc(var(--ann-h) + var(--head-h) + 20px)}
+.sec{border-top:1px solid var(--line);padding-top:var(--sp-3);scroll-margin-top:calc(var(--ann-h) + var(--head-h) + 12px)}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+.sec-head h2{font-size:var(--fs-5);letter-spacing:.01em;display:flex;align-items:center;gap:10px}
+.sec-head h2::before{content:"";width:5px;height:20px;border-radius:3px;background:var(--brand);flex:none}
+.sec-head .more{font-size:var(--fs-2);color:var(--muted)}
+.sec-head .more:hover{color:var(--brand-soft)}
+.lede{color:var(--muted);font-size:var(--fs-2);margin-bottom:16px;max-width:70ch}
+
+/* 概览卡 */
+.overview{display:grid;grid-template-columns:1.1fr 1fr;gap:16px}
+.ov-card{background:linear-gradient(160deg,var(--panel),var(--bg-soft));border:1px solid var(--line);border-radius:var(--r-m);padding:20px}
+.ov-card h3{font-size:var(--fs-4);margin-bottom:10px}
+.ov-card p{color:var(--muted);font-size:var(--fs-2);margin-bottom:10px}
+.ov-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+.ov-facts li{border-left:2px solid var(--accent);padding-left:10px;font-size:var(--fs-2);color:var(--muted)}
+.ov-facts b{display:block;color:var(--text);font-size:var(--fs-4);font-weight:600}
+.type-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.tag{
+  font-size:var(--fs-1);padding:3px 10px;border-radius:999px;
+  border:1px solid var(--line);color:var(--muted);background:var(--bg-soft);
+  transition:border-color .18s,color .18s;
+}
+a.tag:hover{border-color:var(--brand);color:var(--brand-soft)}
+
+/* 精选网格 */
+.pick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pick{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,border-color .18s}
+.pick:hover{transform:translateY(-3px);border-color:var(--brand)}
+.pick img{width:100%;height:132px;object-fit:cover}
+.pick-body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pick-body h3{font-size:var(--fs-3);line-height:1.45}
+.pick-meta{font-size:var(--fs-1);color:var(--muted);display:flex;gap:10px;flex-wrap:wrap}
+.pick-body p{font-size:var(--fs-2);color:var(--muted);flex:1}
+.pill{font-size:11px;color:var(--accent);border:1px solid rgba(77,182,201,.35);border-radius:4px;padding:1px 7px}
+
+/* 紧凑列表 */
+.updates{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden}
+.upd{display:grid;grid-template-columns:86px 1fr auto;gap:14px;padding:13px 16px;background:var(--panel);border-bottom:1px solid var(--line);align-items:baseline}
+.upd:last-child{border-bottom:0}
+.upd time{font-size:var(--fs-1);color:var(--accent);font-variant-numeric:tabular-nums}
+.upd .upd-t{font-size:var(--fs-2)}
+.upd .upd-t b{color:var(--text);font-weight:600}
+.upd .upd-t span{color:var(--muted)}
+.upd .upd-k{font-size:11px;color:var(--muted);border:1px solid var(--line);padding:1px 8px;border-radius:999px;white-space:nowrap}
+
+/* 分类索引 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.cat{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r-m);
+  padding:14px 16px;display:flex;flex-direction:column;gap:4px;transition:border-color .18s,transform .18s;
+}
+.cat:hover{border-color:var(--accent);transform:translateY(-2px)}
+.cat b{font-size:var(--fs-3)}
+.cat span{font-size:var(--fs-1);color:var(--muted)}
+.cat i{font-style:normal;font-size:11px;color:var(--accent);font-variant-numeric:tabular-nums}
+
+/* 深度解析（主体阅读区） */
+.deep{border:1px solid var(--line);border-radius:var(--r-l);background:linear-gradient(180deg,var(--bg-soft),var(--panel));overflow:hidden}
+.deep-head{padding:24px 26px 0}
+.deep-head h2{font-size:var(--fs-5);margin-bottom:8px}
+.deep-by{font-size:var(--fs-1);color:var(--muted);letter-spacing:.04em}
+.deep-body{padding:8px 26px 26px;display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:26px}
+.deep-main h3{font-size:var(--fs-4);margin:22px 0 8px;color:var(--brand-soft)}
+.deep-main p{font-size:var(--fs-3);color:#cfd6e8;margin-bottom:12px}
+.deep-main strong{color:var(--text)}
+.deep-aside{display:flex;flex-direction:column;gap:14px}
+.fact-box{background:var(--panel-2);border:1px solid var(--line);border-radius:var(--r-m);padding:14px}
+.fact-box h4{font-size:var(--fs-2);margin-bottom:10px;color:var(--accent)}
+.fact-box dl{display:grid;grid-template-columns:1fr;gap:8px;font-size:var(--fs-1)}
+.fact-box dt{color:var(--muted)}
+.fact-box dd{color:var(--text);font-variant-numeric:tabular-nums}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden;margin:8px 0 16px}
+.compare > div{padding:12px 14px;font-size:var(--fs-2)}
+.compare .c-head{background:var(--panel-2);color:var(--accent);font-size:var(--fs-1);letter-spacing:.1em}
+.compare .c-l{border-right:1px solid var(--line);color:var(--muted)}
+.compare .c-r{color:var(--text)}
+.quote{font-size:var(--fs-2);color:var(--muted);padding-left:14px;border-left:3px solid var(--brand);margin:14px 0}
+
+/* 体验指南：编号步骤 */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:st}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-m);padding:18px;position:relative}
+.step::before{
+  counter-increment:st;content:counter(st,decimal-leading-zero);
+  font-size:var(--fs-4);font-weight:700;color:var(--brand);display:block;margin-bottom:8px;
+  font-variant-numeric:tabular-nums;
+}
+.step h3{font-size:var(--fs-3);margin-bottom:6px}
+.step p{font-size:var(--fs-2);color:var(--muted)}
+
+/* FAQ */
+.faq{display:flex;flex-direction:column;gap:8px}
+.faq details{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden}
+.faq details[open]{border-color:var(--brand)}
+.faq summary{
+  cursor:pointer;padding:14px 18px;font-size:var(--fs-3);font-weight:600;
+  list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--brand-soft);font-size:18px;flex:none;transition:transform .18s}
+.faq details[open] summary::after{content:"−"}
+.faq .faq-a{padding:0 18px 16px;font-size:var(--fs-2);color:var(--muted)}
+
+/* 评论 */
+.reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.review{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-m);padding:16px;display:flex;flex-direction:column;gap:8px}
+.review-top{display:flex;align-items:center;gap:10px}
+.avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(140deg,var(--accent-2),var(--accent));display:grid;place-items:center;font-size:var(--fs-2);font-weight:700;color:#0f1118;flex:none}
+.review-top b{font-size:var(--fs-2);display:block}
+.review-top span{font-size:11px;color:var(--muted);display:block}
+.review p{font-size:var(--fs-2);color:#cfd6e8}
+.review .ratings{font-size:11px;color:var(--warn);letter-spacing:.06em}
+.review .ref{font-size:11px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.news{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent-2);border-radius:var(--r-s);padding:14px 16px}
+.news time{font-size:var(--fs-1);color:var(--muted)}
+.news h3{font-size:var(--fs-3);margin:4px 0 6px;line-height:1.45}
+.news p{font-size:var(--fs-2);color:var(--muted)}
+
+/* 榜单/可信度分层 */
+.board{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.board-col{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-m);padding:16px}
+.board-col h3{font-size:var(--fs-3);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.board-col h3 i{width:8px;height:8px;border-radius:2px;background:var(--ok);display:inline-block;font-style:normal}
+.board-col.warn h3 i{background:var(--warn)}
+.board-ol{counter-reset:bd;display:flex;flex-direction:column;gap:10px}
+.board-ol li{counter-increment:bd;font-size:var(--fs-2);display:grid;grid-template-columns:26px 1fr;gap:8px;align-items:baseline}
+.board-ol li::before{content:counter(bd);color:var(--muted);font-variant-numeric:tabular-nums;font-weight:700}
+.board-ol li b{font-weight:600}
+.board-ol li span{color:var(--muted);display:block;font-size:var(--fs-1)}
+
+/* 相关推荐标签 */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:8px}
+.tag-cloud a{
+  font-size:var(--fs-2);padding:6px 14px;border-radius:999px;
+  border:1px solid var(--line);background:var(--panel);color:var(--muted);
+  transition:border-color .18s,color .18s,transform .18s;
+}
+.tag-cloud a:hover{border-color:var(--brand);color:var(--brand-soft);transform:translateY(-2px)}
+
+/* 侧栏 */
+.side-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-m);padding:16px}
+.side-card h3{font-size:var(--fs-3);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.side-card h3::before{content:"";width:4px;height:14px;border-radius:2px;background:var(--accent);flex:none}
+.side-nav{position:sticky;top:calc(var(--ann-h) + var(--head-h) + 20px)}
+.side-nav ul{display:flex;flex-direction:column;gap:2px}
+.side-nav a{display:block;font-size:var(--fs-2);color:var(--muted);padding:6px 10px;border-radius:var(--r-s);border-left:2px solid transparent}
+.side-nav a:hover{color:var(--text);background:var(--panel-2)}
+.side-nav a.on{color:var(--brand-soft);border-left-color:var(--brand);background:rgba(240,86,60,.08)}
+.timeline{display:flex;flex-direction:column;gap:0}
+.timeline li{position:relative;padding:0 0 14px 18px;border-left:1px solid var(--line);font-size:var(--fs-2)}
+.timeline li:last-child{padding-bottom:0;border-left-color:transparent}
+.timeline li::before{content:"";position:absolute;left:-4px;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.timeline time{display:block;font-size:var(--fs-1);color:var(--muted)}
+.timeline b{font-weight:600}
+.side-note{font-size:var(--fs-1);color:var(--muted);line-height:1.7}
+.side-note b{color:var(--accent)}
+
+/* 页尾 */
+.site-foot{border-top:1px solid var(--line);background:var(--bg-soft);padding:var(--sp-4) 0 var(--sp-3)}
+.foot-top{display:grid;grid-template-columns:1.4fr 2fr;gap:var(--sp-4);margin-bottom:var(--sp-3)}
+.foot-brand p{font-size:var(--fs-2);color:var(--muted);margin-top:12px;max-width:40ch}
+.foot-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3)}
+.foot-groups h4{font-size:var(--fs-2);margin-bottom:10px;color:var(--text)}
+.foot-groups li{margin-bottom:7px}
+.foot-groups a{font-size:var(--fs-2);color:var(--muted)}
+.foot-groups a:hover{color:var(--brand-soft)}
+.foot-bottom{border-top:1px solid var(--line);padding-top:16px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:var(--fs-1);color:var(--muted)}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:20px;bottom:24px;z-index:80;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--panel);color:var(--text);cursor:pointer;
+  display:grid;place-items:center;font-size:16px;opacity:0;pointer-events:none;
+  transition:opacity .25s,transform .18s;box-shadow:var(--shadow);
+}
+.to-top.show{opacity:1;pointer-events:auto}
+.to-top:hover{transform:translateY(-3px);border-color:var(--brand)}
+
+/* 响应式 */
+@media (max-width:1040px){
+  .layout{grid-template-columns:minmax(0,1fr) 260px}
+  .deep-body{grid-template-columns:1fr}
+  .deep-aside{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .main-nav a{padding:8px 8px;font-size:13px}
+  .search input{width:110px}
+}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .side-col{position:static;order:2}
+  .main-col{order:1}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-visual{justify-self:center;max-width:320px}
+  .overview,.pick-grid,.reviews,.news-grid,.board{grid-template-columns:1fr 1fr}
+  .cat-grid{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:1fr 1fr}
+  .foot-top{grid-template-columns:1fr}
+  .main-nav{
+    position:absolute;left:0;right:0;top:calc(var(--ann-h) + var(--head-h));
+    flex-direction:column;background:var(--panel);border-bottom:1px solid var(--line);
+    padding:10px 20px;display:none;z-index:92;margin-left:0;
+  }
+  .main-nav.open{display:flex}
+  .nav-toggle{display:block}
+  .head-tools .search{display:none}
+  .hero h1{font-size:var(--fs-6)}
+}
+@media (max-width:640px){
+  :root{--fs-6:28px;--fs-5:21px;--sp-5:36px}
+  .wrap{width:calc(100% - 28px)}
+  .overview,.pick-grid,.reviews,.news-grid,.board,.cat-grid,.steps{grid-template-columns:1fr}
+  .hero-stats{gap:18px}
+  .hero-stats div strong{font-size:var(--fs-4)}
+  .upd{grid-template-columns:1fr;gap:4px}
+  .upd .upd-k{justify-self:start}
+  .deep-body{padding:8px 16px 20px}
+  .deep-head{padding:18px 16px 0}
+  .compare{grid-template-columns:1fr 1fr;font-size:12px}
+  .announce .ann-list .ann-extra{display:none}
+  .to-top{right:12px;bottom:16px}
+  .foot-bottom{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .btn:hover,.pick:hover,.cat:hover,.tag-cloud a:hover,.to-top:hover{transform:none}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"先锋成人资源站",
+  "description":"高清影视与成人向内容分类整理，提供影片索引、分级说明与播放体验指南。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"成人向影视资源如何按分级筛选？","acceptedAnswer":{"@type":"Answer","text":"先看片头分级标识：R18+要求实名年龄确认，R15+为受限观看。站内分类页提供分级标签，标签与片源说明冲突时以片商官方公告为准。"}},
+    {"@type":"Question","name":"1080P 与 4K 片源的画质差异体现在哪里？","acceptedAnswer":{"@type":"Answer","text":"同一影片的 4K 版本码率通常在 18—25Mbps，1080P 多在 6—8Mbps。4K 在暗部层次和皮肤纹理上明显更细，但需要至少 25Mbps 的稳定带宽。"}},
+    {"@type":"Question","name":"字幕组标注的\"修正版\"指什么？","acceptedAnswer":{"@type":"Answer","text":"修正版是针对首版画面瑕疵、时间轴错位或翻译错误的二次发布，常见于发行后 7—14 天。字幕组会在发布帖标注修订条目。"}},
+    {"@type":"Question","name":"播放卡顿先排查哪些环节？","acceptedAnswer":{"@type":"Answer","text":"按顺序检查：浏览器是否为最新版本、硬件解码是否开启、当前码率与带宽是否匹配、CDN 节点是否绕路。四项排除后仍卡顿，再考虑片源本身码率过高的可能。"}}
+  ]
+}
+</script>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主内容</a>
+
+<div class="sticky-stack">
+  <div class="announce" role="region" aria-label="站内公告">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <strong>先锋成人资源站</strong>
+      <div class="ann-list">
+        <span>11-06 新增「日系剧情长片」分类 42 部，含 R18+ 分级标识</span>
+        <span class="ann-extra">11-05 修复 4K 片源在 Safari 17 的字幕错位 · <a href="/#updates">查看更新日志</a></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-head">
+    <div class="wrap head-inner">
+      <a class="brand" href="/#top" aria-label="返回首页">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="15" fill="#1b2030" stroke="#2d3550"/>
+          <path d="M22 17l25 15-25 15z" fill="#f0563c"/>
+          <path d="M15 49h34" stroke="#4db6c9" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-text">先锋成人资源站<small>FILM INDEX</small></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">菜单</button>
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <a href="/#overview" class="active">领域概览</a>
+        <a href="/#picks">精选片单</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#cats">分类索引</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#reviews">用户评论</a>
+      </nav>
+      <div class="head-tools">
+        <form class="search" id="searchForm" role="search" aria-label="站内查找">
+          <input type="search" id="searchInput" placeholder="找片名 / 标签" autocomplete="off" aria-label="输入片名或标签">
+          <button type="submit">搜索</button>
+        </form>
+        <a class="btn btn-primary" href="/#picks">开始浏览</a>
+      </div>
+    </div>
+    <div class="search-result" id="searchResult" role="status" aria-live="polite"></div>
+  </header>
+</div>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">高清片源 · 分级标注 · 每日校订</span>
+        <h1>先锋成人资源站</h1>
+        <p class="hero-desc">把散落在发行商页面、字幕组发布帖和论坛索引里的成人向影片集中整理：按分级、片长、画质版本与剧情类型建立索引，附上播放参数和版本差异说明。找片的人先看标签，再看片源注记，不必在几十个发布帖之间来回跳。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#picks">查看精选片单</a>
+          <a class="btn btn-ghost" href="/#guide">播放体验指南</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>3,682</strong><span>在库片源条目</span></div>
+          <div><strong>11</strong><span>主题频道</span></div>
+          <div><strong>2,140</strong><span>累计版本注记</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 420 420" role="img" aria-label="抽象片源索引构图">
+          <defs>
+            <radialGradient id="g1" cx="50%" cy="50%" r="60%">
+              <stop offset="0%" stop-color="#f0563c" stop-opacity=".45"/>
+              <stop offset="100%" stop-color="#f0563c" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#4db6c9"/>
+              <stop offset="100%" stop-color="#8f7cf0"/>
+            </linearGradient>
+          </defs>
+          <circle cx="210" cy="210" r="180" fill="url(#g1)"/>
+          <g class="orbit" fill="none" stroke="#2d3550">
+            <circle cx="210" cy="210" r="150" stroke-dasharray="3 9"/>
+            <circle cx="210" cy="210" r="108"/>
+          </g>
+          <g stroke="url(#g2)" stroke-width="2" fill="none" opacity=".9">
+            <path d="M210 60v300M60 210h300" stroke-dasharray="2 10"/>
+          </g>
+          <circle cx="210" cy="210" r="74" fill="#161a26" stroke="#2d3550"/>
+          <path d="M188 178l58 32-58 32z" fill="#f0563c"/>
+          <g fill="#4db6c9">
+            <circle cx="210" cy="60" r="5"/>
+            <circle cx="360" cy="210" r="5"/>
+            <circle cx="210" cy="360" r="4"/>
+            <circle cx="60" cy="210" r="4"/>
+          </g>
+          <g fill="#8f7cf0" opacity=".8">
+            <circle cx="316" cy="104" r="3.5"/>
+            <circle cx="104" cy="316" r="3.5"/>
+            <circle cx="104" cy="104" r="3"/>
+            <circle cx="316" cy="316" r="3"/>
+          </g>
+          <g font-family="monospace" font-size="11" fill="#9aa4bf">
+            <text x="222" y="52">R18+</text>
+            <text x="316" y="196">4K</text>
+            <text x="196" y="374">1080P</text>
+            <text x="40" y="196">SUB</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+    <div class="main-col">
+
+      <section class="sec" id="overview">
+        <div class="sec-head">
+          <h2>领域概览：成人向影视索引的构成</h2>
+          <a class="more" href="/#cats">进入分类索引 →</a>
+        </div>
+        <div class="overview">
+          <div class="ov-card">
+            <h3>三类片源，三种使用场景</h3>
+            <p>索引里的条目大致分三类：片商官方发行的长篇剧情片、工作室按月更新的短篇合集、以及字幕组搬运并重做时间轴的外语版本。三者在片长、分级标识和水印位置上都有差别，混在一起会让人误判版本新旧。</p>
+            <p>按片长划分，剧情长片多在 90—150 分钟，短篇合集单条 20—40 分钟，外语重制版比原版平均多 3—6 分钟的字幕片头。</p>
+            <div class="type-row">
+              <span class="tag">剧情长片</span>
+              <span class="tag">月度合集</span>
+              <span class="tag">字幕重制版</span>
+              <span class="tag">R18+ 分级</span>
+              <span class="tag">R15+ 分级</span>
+              <span class="tag">修正版</span>
+            </div>
+          </div>
+          <div class="ov-card">
+            <h3>索引当前规模</h3>
+            <ul class="ov-facts">
+              <li><b>3,682</b>在库条目，含 428 条外语版</li>
+              <li><b>11</b>主题频道，最大频道 764 条</li>
+              <li><b>2,140</b>版本注记，平均每条 0.58 条</li>
+              <li><b>96.4%</b>条目含分级标签</li>
+            </ul>
+            <p style="margin-top:14px">片源更新时间统一记到日，字幕组修订记录单列。截止 11-08 的当周，新增 42 条、下架 7 条、改版 15 条。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="picks">
+        <div class="sec-head">
+          <h2>精选内容推荐：本周可看清单</h2>
+          <a class="more" href="/#updates">看全部更新 →</a>
+        </div>
+        <p class="lede">挑选标准是版本完整、分级标注齐全、字幕与音轨同步。以下四部在 11 月第一周完成二次校订，版本注记可查。</p>
+        <div class="pick-grid">
+          <article class="pick">
+            <img src="https://picsum.photos/seed/xianfeng-pick01/640/360" width="640" height="360" loading="lazy" alt="剧情长片《雨夜站台》封面构图，暗蓝调站台与暖黄路灯">
+            <div class="pick-body">
+              <div class="pick-meta"><span class="pill">R18+</span><span>124 分钟</span></div>
+              <h3>《雨夜站台》导演剪辑版</h3>
+              <p>比公映版多 11 分钟，补回站台对峙段落。4K 修复后暗部噪点下降，字幕组 11-04 完成时间轴复核。</p>
+            </div>
+          </article>
+          <article class="pick">
+            <img src="https://picsum.photos/seed/xianfeng-pick02/640/360" width="640" height="360" loading="lazy" alt="月度合集《霓虹笔记》第二辑，霓虹灯与胶片颗粒质感">
+            <div class="pick-body">
+              <div class="pick-meta"><span class="pill">R15+</span><span>单条 28 分钟</span></div>
+              <h3>《霓虹笔记》第二辑</h3>
+              <p>五条短片合集，拍摄花絮单独成段。第二辑换了调色方向，肤色偏青，介意的话可看第一辑对比。</p>
+            </div>
+          </article>
+          <article class="pick">
+            <img src="https://picsum.photos/seed/xianfeng-pick03/640/360" width="640" height="360" loading="lazy" alt="外语重制版《海岸线以北》片头字幕截图">
+            <div class="pick-body">
+              <div class="pick-meta"><span class="pill">外语重制</span><span>97 分钟</span></div>
+              <h3>《海岸线以北》双语字幕版</h3>
+              <p>原版发行于 2025 年，这版增加日中双语轨。翻译对白保留口癖，片尾追加 4 分钟主创访谈。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="updates">
+        <div class="sec-head">
+          <h2>最新更新：11 月第一周校订记录</h2>
+        </div>
+        <p class="lede">只记版本层面的变化：新增、下架、字幕重制、画质替换。同一部片多次改动合并成一行，注释里写清改了什么。</p>
+        <ul class="updates">
+          <li class="upd"><time datetime="2026-11-07">11-07</time><div class="upd-t"><b>《雨夜站台》</b><span>导演剪辑版替换 4K 源，码率由 16Mbps 提到 21Mbps</span></div><span class="upd-k">画质替换</span></li>
+          <li class="upd"><time datetime="2026-11-07">11-07</time><div class="upd-t"><b>《海岸线以北》</b><span>双语字幕 v2 发布，修正 13 处断句</span></div><span class="upd-k">字幕重制</span></li>
+          <li class="upd"><time datetime="2026-11-06">11-06</time><div class="upd-t"><b>「日系剧情长片」频道</b><span>新增 42 条，含分级标签 42 条、播放参数 39 条</span></div><span class="upd-k">分类新增</span></li>
+          <li class="upd"><time datetime="2026-11-06">11-06</time><div class="upd-t"><b>旧版索引表</b><span>移除 7 条失效链接，保留快照 30 天供对照</span></div><span class="upd-k">条目下架</span></li>
+          <li class="upd"><time datetime="2026-11-05">11-05</time><div class="upd-t"><b>Safari 播放兼容</b><span>修正 4K 片源在 Safari 17.4 的字幕错位，改用 WebVTT 轨</span></div><span class="upd-k">兼容修复</span></li>
+          <li class="upd"><time datetime="2026-11-04">11-04</time><div class="upd-t"><b>「暗房与胶片」专题</b><span>补入 9 组幕后剧照，标注拍摄年份</span></div><span class="upd-k">专题扩充</span></li>
+          <li class="upd"><time datetime="2026-11-03">11-03</time><div class="upd-t"><b>R15+ 标签</b><span>统一为「受限观看」，与片商官网措辞对齐</span></div><span class="upd-k">标签规范</span></li>
+          <li class="upd"><time datetime="2026-11-02">11-02</time><div class="upd-t"><b>播放页</b><span>新增码率与带宽匹配提示，卡顿时可自查</span></div><span class="upd-k">功能更新</span></li>
+        </ul>
+      </section>
+
+      <section class="sec" id="cats">
+        <div class="sec-head">
+          <h2>分类入口：11 个主题频道</h2>
+          <a class="more" href="/#deep">看深度解析 →</a>
+        </div>
+        <p class="lede">频道按题材与发行形态交叉划分。想按分级找片，用频道页内的标签筛选；想按版本找，看片源注记里的画质行。</p>
+        <div class="cat-grid">
+          <a class="cat" href="/#picks"><b>日系剧情长片</b><span>90 分钟以上，剧情完整</span><i>764 条</i></a>
+          <a class="cat" href="/#picks"><b>欧美剧情长片</b><span>英语与多语种配音</span><i>531 条</i></a>
+          <a class="cat" href="/#picks"><b>月度短篇合集</b><span>单条 20—40 分钟</span><i>488 条</i></a>
+          <a class="cat" href="/#picks"><b>字幕重制版</b><span>字幕组二次校订</span><i>428 条</i></a>
+          <a class="cat" href="/#picks"><b>导演剪辑版</b><span>比公映版多 5—20 分钟</span><i>296 条</i></a>
+          <a class="cat" href="/#picks"><b>修正版发布</b><span>首版瑕疵二次重发</span><i>243 条</i></a>
+          <a class="cat" href="/#picks"><b>4K 修复专区</b><span>原生 4K 或胶片扫描</span><i>217 条</i></a>
+          <a class="cat" href="/#picks"><b>R18+ 分级</b><span>需实名年龄确认</span><i>1,892 条</i></a>
+          <a class="cat" href="/#picks"><b>R15+ 受限观看</b><span>年龄确认后开放</span><i>1,104 条</i></a>
+          <a class="cat" href="/#picks"><b>幕后花絮与访谈</b><span>拍摄现场与主创对话</span><i>186 条</i></a>
+          <a class="cat" href="/#picks"><b>按发行年份归档</b><span>2024—2026 分年索引</span><i>3,682 条</i></a>
+        </div>
+      </section>
+
+      <section class="sec" id="deep">
+        <div class="deep">
+          <div class="deep-head">
+            <h2>深度解析：为什么「版本注记」比「画质口号」更值得看</h2>
+            <div class="deep-by">深度解析 · 编辑：林原 · 校订：2026-11-06</div>
+          </div>
+          <div class="deep-body">
+            <div class="deep-main">
+              <h3>一、同一部片出现三个「4K」标注，问题出在版本定义</h3>
+              <p>11 月 2 日，「4K 修复专区」里一部 2023 年的作品同时挂着三个标签：片商原始扫描标注、字幕组重编码标注、以及索引自己写的「原生 4K」。三个说法指向不同的东西。片商说的是 35mm 胶片 4K 扫描，字幕组是把 1080P 母带用算法放大后再编码，索引写的是「片源自述」。这三条放在同一行里，读者会误以为它们可以互换。</p>
+              <p>核对办法其实不复杂：看码率和扫描说明。真扫描 4K 的码率一般 18Mbps 以上，附扫描仪型号和色彩空间；算法放大版多在 9—12Mbps，画面在细线条和噪点上会糊成一片。索引从 11-03 起把两类分开，前者进「原生 4K」标签，后者进「重编码」标签。</p>
+              <div class="compare" role="table" aria-label="原生4K与重编码对比">
+                <div class="c-head c-l">原生 4K 扫描</div>
+                <div class="c-head c-r">重编码放大版</div>
+                <div class="c-l">码率 18—25Mbps</div>
+                <div class="c-r">码率 9—12Mbps</div>
+                <div class="c-l">附扫描仪型号与色彩空间</div>
+                <div class="c-r">只写「4K 增强」</div>
+                <div class="c-l">暗部层次保留</div>
+                <div class="c-r">暗部易成块状</div>
+                <div class="c-l">文件体积 12—20GB</div>
+                <div class="c-r">文件体积 4—7GB</div>
+              </div>
+
+              <h3>二、字幕组「修正版」的时间窗，比想象中更短</h3>
+              <p>统计索引里 2026 年 1 月至 10 月的 243 条修正版记录：从首版发布到修正版上线，中位数 9 天，最短 3 天，最长 31 天。超过 21 天才修正的 18 条里，14 条是翻译争议而非技术错误。这说明修正版主要集中在首周，首周没修的，之后多是被观众反复指出才动。</p>
+              <p>对看片的人来说，结论是：首版发布 7 天内如果有修正版，值得等；超过 14 天才出的修正版，多半只改个别句子，不必专门换源。这个判断可以被反驳——按片商发行节奏，季度末的片子修正窗口本来就长。但至少从现有 243 条数据看，中位数没有偏离首周。</p>
+              <blockquote class="quote">「11-04 那版把第 43 分钟的对白整段重译，原译把『退路』翻成『出口』，语义全反。这种错误首版就有，修正拖到第 11 天。」——字幕组发布帖原文摘录</blockquote>
+
+              <h3>三、分级标签与片源说明冲突时，按哪边算</h3>
+              <p>10 月 28 日，一部 R18+ 作品在二次发行时被片商改标为 R15+，理由是删减了两个镜头。索引当时沿用旧标签，11-03 才统一。这类冲突今年出现 9 次，其中 7 次是片商收紧、2 次是放宽。处理规则是：以片商当年发行的官方分级为准，索引标签滞后不超过 5 个工作日；超过 5 天未同步的，条目里加「分级待确认」提示。</p>
+              <p>需要区分的是三种信息：片商公告是事实，字幕组转述是二手信息，索引的「待确认」是推测。看片时如果看到标签冲突，先翻片商官网的发行页，再对索引记录时间。</p>
+            </div>
+            <aside class="deep-aside" aria-label="深度解析数据卡">
+              <div class="fact-box">
+                <h4>修正版时间窗</h4>
+                <dl>
+                  <dt>样本量</dt><dd>243 条（2026-01 至 10）</dd>
+                  <dt>发布到修正中位数</dt><dd>9 天</dd>
+                  <dt>最短 / 最长</dt><dd>3 天 / 31 天</dd>
+                  <dt>超过 21 天</dt><dd>18 条，14 条为翻译争议</dd>
+                </dl>
+              </div>
+              <div class="fact-box">
+                <h4>分级标签冲突</h4>
+                <dl>
+                  <dt>今年冲突次数</dt><dd>9 次</dd>
+                  <dt>收紧 / 放宽</dt><dd>7 次 / 2 次</dd>
+                  <dt>最长滞后</dt><dd>5 个工作日</dd>
+                </dl>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="guide">
+        <div class="sec-head">
+          <h2>体验指南：从找片到播放的四步</h2>
+        </div>
+        <p class="lede">以 1080P、6Mbps 的常见片源为基准。带宽、设备、字幕轨三项不匹配，是卡顿和错位的主要来源。</p>
+        <div class="steps">
+          <div class="step">
+            <h3>用分级和片长筛第一轮</h3>
+            <p>频道页顶部有分级与片长两个筛选器。R18+ 需先完成年龄确认，R15+ 确认后直接开放。片长按 60 分钟以下、60—90、90 以上三档。</p>
+          </div>
+          <div class="step">
+            <h3>看片源注记再点播放</h3>
+            <p>注记分三行：画质与码率、字幕类型、版本修订。字幕类型写「内嵌」或「外挂 WebVTT」，后者在 Safari 17.4 以下可能错位。</p>
+          </div>
+          <div class="step">
+            <h3>按带宽选清晰度</h3>
+            <p>25Mbps 以下带宽不选 4K。1080P 需要 8Mbps 稳定下行，720P 需要 4Mbps。播放页会显示当前码率，低于片源码率就降一档。</p>
+          </div>
+          <div class="step">
+            <h3>卡顿时按顺序排查</h3>
+            <p>先看浏览器版本，再看硬件解码开关，然后对比当前带宽与片源码率，最后查 CDN 节点是否绕路。四项过一遍，基本能定位。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="faq">
+        <div class="sec-head">
+          <h2>常见问题：分级、画质与字幕</h2>
+        </div>
+        <div class="faq">
+          <details open>
+            <summary>成人向影视资源如何按分级筛选？</summary>
+            <div class="faq-a">先看片头分级标识：R18+ 要求实名年龄确认，R15+ 为受限观看。分类页提供分级标签，标签与片源说明冲突时以片商官方公告为准。索引的标签同步滞后不超过 5 个工作日，超时会加「待确认」提示。</div>
+          </details>
+          <details>
+            <summary>1080P 与 4K 片源的画质差异体现在哪里？</summary>
+            <div class="faq-a">同一影片的 4K 版本码率通常在 18—25Mbps，1080P 多在 6—8Mbps。4K 在暗部层次和皮肤纹理上明显更细，但需要至少 25Mbps 的稳定带宽。算法放大的「重编码 4K」码率只有 9—12Mbps，暗部容易成块，看细线条反而更糊。</div>
+          </details>
+          <details>
+            <summary>字幕组标注的「修正版」指什么？</summary>
+            <div class="faq-a">修正版是针对首版画面瑕疵、时间轴错位或翻译错误的二次发布，常见于发行后 7—14 天。字幕组会在发布帖标注修订条目，索引只记条目数，不复述原文。今年 243 条修正记录的中位数是 9 天。</div>
+          </details>
+          <details>
+            <summary>播放卡顿先排查哪些环节？</summary>
+            <div class="faq-a">按顺序检查：浏览器是否为最新版本、硬件解码是否开启、当前码率与带宽是否匹配、CDN 节点是否绕路。四项排除后仍卡顿，再考虑片源本身码率过高的可能。11-02 起播放页显示实时码率，可对照自查。</div>
+          </details>
+          <details>
+            <summary>片源注记里的「版本修订」有统一格式吗？</summary>
+            <div class="faq-a">有。修订行固定写三件事：修订日期、被改动的对象（画质 / 字幕 / 音轨）、改动前后的具体值。例如「11-07 画质 16→21Mbps」。没有具体值的一律不写入，避免只写「优化」这种无法核对的说法。</div>
+          </details>
+        </div>
+      </section>
+
+      <section class="sec" id="reviews">
+        <div class="sec-head">
+          <h2>用户评论：版本注记到底有没有用</h2>
+          <a class="more" href="/#updates">看更新记录 →</a>
+        </div>
+        <div class="reviews">
+          <article class="review">
+            <div class="review-top">
+              <div class="avatar" aria-hidden="true">周</div>
+              <div><b>周叙白</b><span>11-07 22:14 · 已确认年龄</span></div>
+            </div>
+            <div class="ratings" aria-label="评分 5 星">★★★★★</div>
+            <p>《雨夜站台》导演剪辑版换源后，第 71 分钟那段站台对峙的暗部终于有层次了。之前 16Mbps 版本里人影糊成一片，现在能看清衣着纹理。改版注记写得清楚，比只写「画质升级」强。</p>
+            <div class="ref">指向条目：《雨夜站台》导演剪辑版 · 11-07 画质替换</div>
+          </article>
+          <article class="review">
+            <div class="review-top">
+              <div class="avatar" aria-hidden="true">陈</div>
+              <div><b>陈默</b><span>11-07 19:40 · 已确认年龄</span></div>
+            </div>
+            <div class="ratings" aria-label="评分 3 星">★★★☆☆</div>
+            <p>《霓虹笔记》第二辑调色偏青，肤色看着不太自然，第一辑更接近实拍。合集本身没毛病，五条短片节奏都在，只是这版调色不是我的口味。注记里没提调色方向，建议补上。</p>
+            <div class="ref">指向条目：《霓虹笔记》第二辑 · 调色方向</div>
+          </article>
+          <article class="review">
+            <div class="review-top">
+              <div class="avatar" aria-hidden="true">林</div>
+              <div><b>林知远</b><span>11-06 15:22 · 已确认年龄</span></div>
+            </div>
+            <div class="ratings" aria-label="评分 4 星">★★★★☆</div>
+            <p>分类页新加的 42 部日系剧情长片，分级标签基本齐全，但片长字段有 3 条空着。找片时还是得点进去看，体验上差一步。希望补齐。</p>
+            <div class="ref">指向条目：日系剧情长片频道 · 11-06 新增</div>
+          </article>
+          <article class="review">
+            <div class="review-top">
+              <div class="avatar" aria-hidden="true">许</div>
+              <div><b>许棠</b><span>11-05 10:08 · 已确认年龄</span></div>
+            </div>
+            <div class="ratings" aria-label="评分 2 星">★★☆☆☆</div>
+            <p>《海岸线以北》双语字幕 v2 的第 43 分钟断句还是怪，「退路」翻成了「出口」，意思反了。发布帖说修了 13 处，这处显然没修到。版本注记写得很细，可翻译本身还得再校一遍。</p>
+            <div class="ref">指向条目：《海岸线以北》双语字幕 v2 · 43 分钟对白</div>
+          </article>
+          <article class="review">
+            <div class="review-top">
+              <div class="avatar" aria-hidden="true">赵</div>
+              <div><b>赵一舟</b><span>11-04 21:33 · 已确认年龄</span></div>
+            </div>
+            <div class="ratings" aria-label="评分 4 星">★★★★☆</div>
+            <p>Safari 17.4 的字幕错位修好了，之前每过十分钟就飘一次。换成 WebVTT 轨之后稳定。播放页显示码率这个改动也实用，卡之前就看得出来。</p>
+            <div class="ref">指向条目：11-05 兼容修复</div>
+          </article>
+          <article class="review">
+            <div class="review-top">
+              <div class="avatar" aria-hidden="true">吴</div>
+              <div><b>吴岐</b><span>11-03 09:15 · 已确认年龄</span></div>
+            </div>
+            <div class="ratings" aria-label="评分 3 星">★★★☆☆</div>
+            <p>「4K 修复专区」里混着重编码放大版，标题看着都写 4K，点进去码率只有 10Mbps 上下。11-03 分开之后好多了，但旧条目还有几条没挪。<br>另外下架的 7 条为什么下架，只写「失效」太笼统。</p>
+            <div class="ref">指向条目：4K 修复专区 · 11-03 标签拆分</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="news">
+        <div class="sec-head">
+          <h2>相关资讯：发行与字幕组动态</h2>
+        </div>
+        <div class="news-grid">
+          <article class="news">
+            <time datetime="2026-11-07">2026-11-07</time>
+            <h3>日系剧情长片 11 月第二批发行表公布</h3>
+            <p>片商公布 11 月第二批共 18 部，其中 R18+ 12 部、R15+ 6 部。发行日集中在 11-14 至 11-20，索引已建占位条目，分级标签先于片源上线。</p>
+          </article>
+          <article class="news">
+            <time datetime="2026-11-06">2026-11-06</time>
+            <h3>某字幕组宣布暂停周更，改为双周更</h3>
+            <p>该组在发布帖说明：校对人力从 6 人减到 3 人，周更改双周更。受影响的 14 部连载合集索引已标注「双周更」，修正版时间窗可能从 9 天拉长到 14 天左右。</p>
+          </article>
+          <article class="news">
+            <time datetime="2026-11-05">2026-11-05</time>
+            <h3>Safari 17.4 字幕错位修复方案公开</h3>
+            <p>修复方式是把内嵌 ASS 转成外挂 WebVTT，时间轴偏移从平均 1.2 秒降到 0.3 秒以内。方案已写入播放页说明，其他浏览器不受影响。</p>
+          </article>
+          <article class="news">
+            <time datetime="2026-11-02">2026-11-02</time>
+            <h3>播放页上线实时码率显示</h3>
+            <p>播放页右上角显示当前片源码率与建议带宽阈值。低于阈值时提示降档，阈值按 1080P 8Mbps、4K 25Mbps 设定。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="board">
+        <div class="sec-head">
+          <h2>可信度分层：片源注记怎么打分</h2>
+        </div>
+        <p class="lede">按注记完整度和可核对程度分两层，不评价内容本身。分数只反映记录质量，与影片优劣无关。</p>
+        <div class="board">
+          <div class="board-col">
+            <h3><i aria-hidden="true"></i>注记完整（A 层）</h3>
+            <ol class="board-ol">
+              <li><b>《雨夜站台》导演剪辑版</b><span>画质、字幕、修订三项齐全，含码率前后值</span></li>
+              <li><b>《海岸线以北》双语字幕 v2</b><span>标注断句修订条数，含发布日期</span></li>
+              <li><b>月度短篇合集第一批</b><span>片长逐条标注，附拍摄年份</span></li>
+              <li><b>4K 原生扫描区 217 条</b><span>附扫描仪型号与色彩空间说明</span></li>
+            </ol>
+          </div>
+          <div class="board-col warn">
+            <h3><i aria-hidden="true"></i>待补注记（B 层）</h3>
+            <ol class="board-ol">
+              <li><b>日系剧情长片新增 3 条</b><span>片长字段空缺，分级标签已补</span></li>
+              <li><b>重编码 4K 旧条目 4 条</b><span>未从「4K 修复专区」挪出</span></li>
+              <li><b>下架 7 条</b><span>下架原因统一写「失效」，未细分</span></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="related">
+        <div class="sec-head">
+          <h2>相关推荐：按具体需求找</h2>
+        </div>
+        <div class="tag-cloud">
+          <a href="/#picks">导演剪辑版与公映版差异</a>
+          <a href="/#deep">修正版发布时间统计</a>
+          <a href="/#guide">4K 片源带宽需求</a>
+          <a href="/#faq">R18+ 分级确认流程</a>
+          <a href="/#picks">双语字幕轨切换方法</a>
+          <a href="/#updates">字幕组双周更影响</a>
+          <a href="/#deep">原生 4K 与重编码辨别</a>
+          <a href="/#guide">Safari 字幕错位修复</a>
+          <a href="/#board">片源注记完整度分级</a>
+          <a href="/#picks">月度合集调色对比</a>
+          <a href="/#news">11 月第二批发行表</a>
+          <a href="/#reviews">用户实测卡顿排查</a>
+        </div>
+      </section>
+
+    </div>
+
+    <aside class="side-col" aria-label="辅助信息">
+      <nav class="side-card side-nav" aria-label="页面目录">
+        <h3>页面目录</h3>
+        <ul id="sideNav">
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#picks">精选内容推荐</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#cats">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#reviews">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#board">可信度分层</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+        </ul>
+      </nav>
+
+      <div class="side-card">
+        <h3>本周校订时间线</h3>
+        <ul class="timeline">
+          <li><time datetime="2026-11-07">11-07</time><b>《雨夜站台》</b>换 4K 源，码率 21Mbps</li>
+          <li><time datetime="2026-11-06">11-06</time><b>日系剧情长片</b>新增 42 条</li>
+          <li><time datetime="2026-11-05">11-05</time><b>Safari</b> 字幕错位修复上线</li>
+          <li><time datetime="2026-11-03">11-03</time><b>4K 标签</b>拆分原生与重编码</li>
+          <li><time datetime="2026-11-02">11-02</time><b>播放页</b>实时码率显示</li>
+        </ul>
+      </div>
+
+      <div class="side-card">
+        <h3>播放参数速查</h3>
+        <p class="side-note">
+          <b>1080P</b> 码率 6—8Mbps，需 8Mbps 下行<br>
+          <b>4K 原生</b> 码率 18—25Mbps，需 25Mbps 下行<br>
+          <b>4K 重编码</b> 码率 9—12Mbps，暗部易成块<br>
+          <b>字幕</b> 内嵌 ASS / 外挂 WebVTT<br>
+          <b>兼容</b> Safari 17.4 以下用 WebVTT 避免错位
+        </p>
+      </div>
+
+      <div class="side-card">
+        <h3>互动入口</h3>
+        <p class="side-note">发现片长空缺或分级标注冲突，可在对应条目的评论里留言，附上片商公告截图。注记组每周三、周六集中处理。</p>
+        <p style="margin-top:10px"><a class="btn btn-ghost" href="/#reviews">去评论区留言</a></p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/#top" aria-label="返回顶部">
+          <svg viewBox="0 0 64 64" aria-hidden="true" width="30" height="30">
+            <rect width="64" height="64" rx="15" fill="#1b2030" stroke="#2d3550"/>
+            <path d="M22 17l25 15-25 15z" fill="#f0563c"/>
+            <path d="M15 49h34" stroke="#4db6c9" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-text">先锋成人资源站</span>
+        </a>
+        <p>把散落的片源信息收成可核对的注记：分级、片长、码率、版本修订，一条一条写清楚。</p>
+      </div>
+      <div class="foot-groups">
+        <div>
+          <h4>找片入口</h4>
+          <ul>
+            <li><a href="/#picks">精选内容推荐</a></li>
+            <li><a href="/#cats">11 个主题频道</a></li>
+            <li><a href="/#updates">最新校订记录</a></li>
+            <li><a href="/#related">相关推荐标签</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>规则与说明</h4>
+          <ul>
+            <li><a href="/#guide">播放体验指南</a></li>
+            <li><a href="/#faq">分级与字幕问题</a></li>
+            <li><a href="/#board">片源注记分层</a></li>
+            <li><a href="/#deep">版本差异解析</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>参与校订</h4>
+          <ul>
+            <li><a href="/#reviews">用户评论与留言</a></li>
+            <li><a href="/#news">发行与字幕组动态</a></li>
+            <li><a href="/#deep">数据统计说明</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>页面内影片条目、评论、数据均为示例，用于展示索引结构；分级与年龄确认以片商官方发行说明为准。</span>
+      <span>更新至 2026-11-08 · 对应正文「最新更新」校订记录 · © 2026 先锋成人资源站</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var navToggle = document.getElementById('navToggle');
+  var mainNav = document.getElementById('mainNav');
+  if(navToggle && mainNav){
+    navToggle.addEventListener('click', function(){
+      var open = mainNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.textContent = open ? '关闭' : '菜单';
+    });
+    mainNav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 900){
+        mainNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded','false');
+        navToggle.textContent = '菜单';
+      }
+    });
+  }
+
+  var toTop = document.getElementById('toTop');
+  var ticking = false;
+  function onScroll(){
+    if(!ticking){
+      window.requestAnimationFrame(function(){
+        if(window.scrollY > 520){ toTop.classList.add('show'); }
+        else{ toTop.classList.remove('show'); }
+        highlight();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = sideLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  });
+  function highlight(){
+    var pos = window.scrollY + 160;
+    var idx = 0;
+    for(var i=0;i<sections.length;i++){
+      if(sections[i] && sections[i].offsetTop <= pos){ idx = i; }
+    }
+    sideLinks.forEach(function(a,i){ a.classList.toggle('on', i===idx); });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  highlight();
+
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('searchInput');
+  var box = document.getElementById('searchResult');
+  if(form && input && box){
+    input.addEventListener('input', function(){
+      if(!input.value.trim()){ box.classList.remove('show'); box.innerHTML=''; }
+    });
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var q = input.value.trim().toLowerCase();
+      if(!q){ box.innerHTML = '<div class="empty">输入片名、频道或标签再搜索。</div>'; box.classList.add('show'); return; }
+      var nodes = document.querySelectorAll('.pick-body h3, .cat b, .news h3, .tag-cloud a, .faq summary');
+      var results = [];
+      nodes.forEach(function(n){
+        var t = n.textContent.trim();
+        if(t.toLowerCase().indexOf(q) !== -1 && results.length < 8){
+          var target = n.closest('a') ? n.closest('a').getAttribute('href') : (n.closest('.sec') ? '/#' + n.closest('.sec').id : '/#picks');
+          results.push({t:t, u:target});
+        }
+      });
+      if(results.length){
+        box.innerHTML = '<ul>' + results.map(function(r){
+          return '<li><a href="' + r.u + '">' + r.t + '</a></li>';
+        }).join('') + '</ul>';
+      }else{
+        box.innerHTML = '<div class="empty">没有匹配「' + input.value.trim().replace(/</g,'&lt;') + '」的条目。换个片名关键词，或直接翻分类索引。</div>';
+      }
+      box.classList.add('show');
+    });
+    document.addEventListener('click', function(e){
+      if(!box.contains(e.target) && e.target !== input && !form.contains(e.target)){
+        box.classList.remove('show');
+      }
+    });
+  }
+})();
+</script>
+</body>
+                    </html>
