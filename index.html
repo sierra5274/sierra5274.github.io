@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>寻剧吧在线观看-剧集索引与追剧指南</title>
+<meta name="description" content="寻剧吧在线观看栏目整理近期上线的国产剧、韩剧与英美剧集索引，含分集更新节点、题材分类入口、选剧判断方法与追剧时间表，方便按平台、集数与口碑快速定位想看的内容。">
+<meta name="keywords" content="寻剧吧在线观看">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d2a4a'/%3E%3Cpath d='M18 20h22a6 6 0 0 1 6 6v18a6 6 0 0 1-6 6H18z' fill='%23e8b64c'/%3E%3Cpath d='M30 28l12 6-12 6z' fill='%231d2a4a'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1a2130;
+  --ink-2:#3d4759;
+  --ink-3:#66707f;
+  --paper:#f6f4ef;
+  --card:#ffffff;
+  --line:#e0dbd1;
+  --brand:#1d2a4a;
+  --brand-2:#2f4270;
+  --accent:#c8871c;
+  --accent-soft:#f5e6c6;
+  --teal:#1f6f6b;
+  --teal-soft:#e0efeD;
+  --rose:#a2432f;
+  --rose-soft:#f7e5df;
+  --r-sm:6px;
+  --r-md:10px;
+  --r-lg:16px;
+  --sh-1:0 1px 2px rgba(26,33,48,.06),0 2px 8px rgba(26,33,48,.05);
+  --sh-2:0 6px 20px rgba(26,33,48,.10);
+  --sp:clamp(14px,2vw,22px);
+  --maxw:1180px;
+  --anchor-off:118px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font);line-height:1.75;
+  font-size:16px;-webkit-text-size-adjust:100%;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.35;margin:0}
+p{margin:0 0 .9em}
+ul,ol{margin:0 0 .9em;padding-left:1.2em}
+button{font-family:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+/* ---------- sticky stack ---------- */
+.sticky-stack{position:sticky;top:0;z-index:60}
+.notice{
+  background:linear-gradient(90deg,#15203a,#25365c 60%,#31456f);
+  color:#f4ecd8;font-size:13.5px;
+  padding:7px 0;
+}
+.notice .wrap{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.notice strong{color:#f0c76a;font-weight:600}
+.notice .dot{width:7px;height:7px;border-radius:50%;background:#f0c76a;flex:none;animation:pulse 2.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.wrap{width:min(var(--maxw),100% - 32px);margin:0 auto}
+.site-head{
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 1px 0 rgba(26,33,48,.04);
+}
+.head-inner{display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:38px;height:38px;flex:none}
+.brand-name{font-size:19px;font-weight:700;letter-spacing:.5px;color:var(--brand)}
+.brand-sub{display:block;font-size:11px;color:var(--ink-3);letter-spacing:1.5px;font-weight:400;line-height:1}
+.main-nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+.main-nav a{
+  padding:6px 11px;border-radius:var(--r-sm);font-size:14.5px;color:var(--ink-2);
+}
+.main-nav a:hover{background:var(--accent-soft);text-decoration:none;color:var(--brand)}
+.search-mini{display:flex;align-items:center;gap:6px;flex:none}
+.search-mini input{
+  width:164px;padding:7px 10px;border:1px solid var(--line);border-radius:var(--r-sm);
+  background:#fbfaf7;font-size:14px;color:var(--ink);
+}
+.search-mini button{
+  padding:7px 13px;border:0;border-radius:var(--r-sm);background:var(--brand);color:#fff;
+  font-size:14px;cursor:pointer;
+}
+.search-mini button:hover{background:var(--brand-2)}
+.menu-btn{
+  display:none;border:1px solid var(--line);background:#fff;border-radius:var(--r-sm);
+  padding:7px 12px;font-size:14px;cursor:pointer;color:var(--ink-2);
+}
+#search-feedback{
+  width:100%;font-size:13px;color:var(--ink-3);padding:0 0 8px;
+}
+#search-feedback:empty{display:none}
+#search-feedback b{color:var(--rose)}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;color:#f3eee2;
+  background:radial-gradient(1100px 420px at 82% -10%,#3a5081 0%,#1d2a4a 46%,#141c30 100%);
+}
+.hero::after{
+  content:"";position:absolute;inset:auto 0 0 0;height:120px;
+  background:linear-gradient(180deg,rgba(246,244,239,0),var(--paper));
+  pointer-events:none;
+}
+.hero-inner{
+  position:relative;z-index:1;display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:clamp(18px,3vw,44px);align-items:center;
+  padding:clamp(30px,5vw,58px) 0 clamp(42px,6vw,66px);
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:2px;
+  color:#f0c76a;border:1px solid rgba(240,199,106,.45);border-radius:999px;
+  padding:4px 14px;margin-bottom:16px;
+}
+.hero h1{
+  font-size:clamp(27px,4.2vw,44px);letter-spacing:1px;font-weight:700;color:#fff;
+  margin-bottom:14px;
+}
+.hero p.lede{
+  font-size:clamp(14.5px,1.5vw,16.5px);color:#d7d5cb;max-width:34em;margin-bottom:22px;
+}
+.hero-stats{display:flex;gap:clamp(14px,3vw,34px);flex-wrap:wrap;margin-bottom:24px}
+.hero-stats div{border-left:2px solid rgba(240,199,106,.55);padding-left:12px}
+.hero-stats b{display:block;font-size:22px;color:#f0c76a;line-height:1.2}
+.hero-stats span{font-size:12.5px;color:#b9bcc4;letter-spacing:.5px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:10px 20px;border-radius:var(--r-sm);font-size:14.5px;
+  border:1px solid transparent;cursor:pointer;
+}
+.btn-main{background:var(--accent);color:#191f2e;font-weight:600}
+.btn-main:hover{background:#dda03a;text-decoration:none}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#f2eee3}
+.btn-ghost:hover{background:rgba(255,255,255,.1);text-decoration:none}
+.hero-art{position:relative;min-height:250px}
+.hero-art svg{width:100%;height:auto;display:block}
+.hero-art .cap{
+  position:absolute;right:0;bottom:-4px;font-size:11.5px;color:#9aa1b2;letter-spacing:.6px;
+}
+
+/* ---------- layout ---------- */
+.layout{
+  display:grid;grid-template-columns:minmax(0,1fr) 288px;
+  gap:clamp(18px,2.4vw,34px);padding:clamp(24px,3.4vw,40px) 0 40px;
+  align-items:start;
+}
+main{min-width:0}
+aside{min-width:0;position:sticky;top:var(--anchor-off)}
+
+section[id],div[id^="sec-"]{scroll-margin-top:var(--anchor-off)}
+.block{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:clamp(16px,2.2vw,26px);margin-bottom:clamp(16px,2.2vw,26px);
+  box-shadow:var(--sh-1);
+}
+.block-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.block-head h2{font-size:clamp(18px,2.1vw,21.5px);color:var(--brand);letter-spacing:.4px}
+.block-head .kicker{font-size:12px;color:var(--accent);letter-spacing:2px;font-weight:600}
+.block-intro{font-size:14px;color:var(--ink-3);margin-bottom:16px}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{
+  border:1px solid var(--line);border-radius:var(--r-md);background:#fff;
+  padding:14px 15px;transition:transform .18s ease,box-shadow .18s ease,border-color .18s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--sh-2);border-color:#cfc7b7}
+.card h3{font-size:15.5px;margin-bottom:6px;color:var(--ink)}
+.card p{font-size:13.5px;color:var(--ink-2);margin-bottom:6px}
+.meta{font-size:12px;color:var(--ink-3);letter-spacing:.3px}
+.meta b{color:var(--brand-2);font-weight:600}
+.pill{
+  display:inline-block;font-size:12px;padding:1px 9px;border-radius:999px;
+  background:var(--accent-soft);color:#7a5310;margin-right:6px;
+}
+.pill.teal{background:var(--teal-soft);color:var(--teal)}
+.pill.rose{background:var(--rose-soft);color:var(--rose)}
+.pill.plain{background:#f0eee8;color:var(--ink-3)}
+
+/* compact list */
+.tight-list{list-style:none;padding:0;margin:0}
+.tight-list li{
+  display:grid;grid-template-columns:74px minmax(0,1fr) auto;gap:12px;align-items:baseline;
+  padding:9px 2px;border-bottom:1px dashed var(--line);font-size:14px;
+}
+.tight-list li:last-child{border-bottom:0}
+.tight-list .t{font-size:12.5px;color:var(--accent);font-weight:600;letter-spacing:.4px}
+.tight-list .n{color:var(--ink)}
+.tight-list .n small{color:var(--ink-3);font-size:12.5px}
+.tight-list .s{font-size:12px;color:var(--ink-3);white-space:nowrap}
+
+/* category index */
+.chan-index{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px}
+.chan-index a{
+  display:flex;flex-direction:column;gap:2px;padding:11px 13px;border-radius:var(--r-md);
+  background:#fbfaf6;border:1px solid var(--line);
+}
+.chan-index a:hover{background:var(--accent-soft);border-color:#e6d3a6;text-decoration:none}
+.chan-index strong{font-size:14.5px;color:var(--brand);font-weight:600}
+.chan-index span{font-size:12px;color:var(--ink-3)}
+
+/* article */
+article.deep{ }
+article.deep h3{
+  font-size:17px;color:var(--brand);margin:22px 0 8px;padding-left:11px;
+  border-left:4px solid var(--accent);
+}
+article.deep h3:first-of-type{margin-top:6px}
+article.deep p{font-size:15px;color:var(--ink-2)}
+.pull-quote{
+  border-left:4px solid var(--teal);background:var(--teal-soft);
+  padding:12px 16px;border-radius:0 var(--r-md) var(--r-md) 0;
+  font-size:15px;color:#184e4b;margin:16px 0;
+}
+.cmp{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0}
+.cmp caption{text-align:left;font-size:12.5px;color:var(--ink-3);padding-bottom:6px}
+.cmp th,.cmp td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.cmp th{background:#f4f1ea;color:var(--brand);font-weight:600;font-size:13px}
+.cmp tbody tr:nth-child(even){background:#fbfaf7}
+.verify{list-style:none;padding:0;margin:10px 0}
+.verify li{
+  display:grid;grid-template-columns:auto 1fr;gap:9px;font-size:14px;
+  padding:6px 0;color:var(--ink-2);
+}
+.verify .chk{
+  width:18px;height:18px;border-radius:4px;border:1px solid var(--teal);
+  display:inline-flex;align-items:center;justify-content:center;color:var(--teal);
+  font-size:12px;flex:none;margin-top:3px;
+}
+
+/* steps */
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:11px}
+.steps li{
+  counter-increment:s;position:relative;padding:11px 14px 11px 46px;
+  border:1px solid var(--line);border-radius:var(--r-md);background:#fbfaf6;font-size:14px;
+}
+.steps li::before{
+  content:counter(s);position:absolute;left:13px;top:11px;width:22px;height:22px;
+  border-radius:50%;background:var(--brand);color:#f0c76a;font-size:12.5px;
+  display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+.steps b{color:var(--brand-2)}
+
+/* faq */
+details.faq{
+  border:1px solid var(--line);border-radius:var(--r-md);background:#fff;
+  margin-bottom:9px;overflow:hidden;
+}
+details.faq[open]{border-color:#e0cfa4;background:#fffdf7}
+details.faq summary{
+  cursor:pointer;padding:12px 40px 12px 15px;font-size:14.5px;font-weight:600;color:var(--ink);
+  list-style:none;position:relative;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{
+  content:"+";position:absolute;right:15px;top:50%;transform:translateY(-50%);
+  font-size:19px;color:var(--accent);font-weight:400;line-height:1;
+}
+details.faq[open] summary::after{content:"–"}
+details.faq .ans{padding:0 15px 13px;font-size:14px;color:var(--ink-2)}
+
+/* comments */
+.cmt{border:1px solid var(--line);border-radius:var(--r-md);padding:12px 14px;background:#fff;font-size:14px}
+.cmt + .cmt{margin-top:10px}
+.cmt-head{display:flex;align-items:center;gap:9px;margin-bottom:6px;flex-wrap:wrap}
+.avatar{
+  width:26px;height:26px;border-radius:50%;background:var(--brand);color:#f0c76a;
+  display:flex;align-items:center;justify-content:center;font-size:12.5px;flex:none;font-weight:600;
+}
+.cmt-head .who{font-weight:600;font-size:13.5px;color:var(--ink)}
+.cmt-head .when{font-size:12px;color:var(--ink-3);margin-left:auto}
+.cmt p{margin:0;color:var(--ink-2)}
+.cmt .quote-ref{color:var(--brand-2);font-weight:600}
+
+/* sidebar */
+.side-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:16px;margin-bottom:16px;box-shadow:var(--sh-1);
+}
+.side-card h2{font-size:15px;color:var(--brand);margin-bottom:10px;letter-spacing:.5px}
+.side-nav{list-style:none;padding:0;margin:0;font-size:13.5px}
+.side-nav a{
+  display:block;padding:6px 10px;border-radius:var(--r-sm);color:var(--ink-2);
+  border-left:3px solid transparent;
+}
+.side-nav a:hover{background:#f7f4ec;text-decoration:none}
+.side-nav a.active{
+  background:var(--accent-soft);color:var(--brand);border-left-color:var(--accent);font-weight:600;
+}
+.tag-index{display:flex;flex-wrap:wrap;gap:7px}
+.tag-index a{
+  font-size:12.5px;padding:3px 10px;border-radius:999px;background:#f4f1e9;
+  border:1px solid var(--line);color:var(--ink-2);
+}
+.tag-index a:hover{background:var(--accent-soft);color:#6d4a0d;text-decoration:none}
+.mini-rank{list-style:none;padding:0;margin:0;font-size:13.5px;counter-reset:r}
+.mini-rank li{
+  counter-increment:r;display:grid;grid-template-columns:22px 1fr;gap:8px;padding:6px 0;
+  border-bottom:1px dashed var(--line);color:var(--ink-2);
+}
+.mini-rank li:last-child{border-bottom:0}
+.mini-rank li::before{
+  content:counter(r);color:var(--accent);font-weight:700;font-size:12.5px;
+}
+.side-note{font-size:12px;color:var(--ink-3);line-height:1.7;margin:8px 0 0}
+
+/* timeline */
+.timeline{list-style:none;padding:0;margin:0;position:relative}
+.timeline::before{
+  content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:var(--line);
+}
+.timeline li{position:relative;padding:0 0 14px 32px;font-size:14px}
+.timeline li::before{
+  content:"";position:absolute;left:3px;top:6px;width:14px;height:14px;border-radius:50%;
+  background:#fff;border:3px solid var(--accent);
+}
+.timeline .d{font-size:12.5px;color:var(--accent);font-weight:600;letter-spacing:.5px}
+.timeline b{color:var(--brand-2)}
+.timeline p{margin:2px 0 0;font-size:13.5px;color:var(--ink-2)}
+
+/* voices / credibility tiers */
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.tier{border-radius:var(--r-md);padding:13px;font-size:13.5px;border:1px solid}
+.tier h3{font-size:14px;margin-bottom:6px}
+.tier.a{background:#eef6f1;border-color:#c6e0d1}
+.tier.a h3{color:#1f6f4b}
+.tier.b{background:#fbf6e8;border-color:#e8d9ae}
+.tier.b h3{color:#8a6410}
+.tier.c{background:#f9ecea;border-color:#eccfc8}
+.tier.c h3{color:#8d3524}
+.tier p{margin:0 0 5px;color:var(--ink-2);font-size:13px}
+.tier ul{margin:0;padding-left:1.05em;font-size:13px;color:var(--ink-2)}
+
+/* footer */
+footer{
+  background:#141c30;color:#b9bfcc;margin-top:10px;
+  padding:clamp(26px,4vw,44px) 0 26px;font-size:13.5px;
+}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:24px}
+footer h4{font-size:13px;color:#f0c76a;letter-spacing:1.5px;margin-bottom:9px;font-weight:600}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{padding:2.5px 0}
+footer a{color:#c3c9d6}
+footer a:hover{color:#f0c76a;text-decoration:none}
+.foot-brand{display:flex;align-items:center;gap:9px;margin-bottom:9px}
+.foot-brand svg{width:32px;height:32px}
+.foot-brand strong{color:#fff;font-size:17px;letter-spacing:.5px}
+.foot-pos{color:#9aa3b4;line-height:1.7;max-width:26em}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.12);margin-top:22px;padding-top:14px;
+  display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between;font-size:12.5px;color:#848d9f;
+}
+.foot-bottom .dotsep{color:#4b5568}
+
+/* back to top */
+#to-top{
+  position:fixed;right:16px;bottom:18px;z-index:70;
+  width:44px;height:44px;border-radius:50%;border:1px solid #d8cfb8;
+  background:#fff;color:var(--brand);font-size:18px;cursor:pointer;
+  box-shadow:var(--sh-2);opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:opacity .2s,transform .2s,visibility .2s;
+}
+#to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+
+/* responsive */
+@media (max-width:960px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  aside{position:static;order:2}
+  .hero-inner{grid-template-columns:minmax(0,1fr)}
+  .hero-art{order:-1;max-width:420px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .tiers{grid-template-columns:1fr}
+  .main-nav{
+    display:none;order:5;flex-basis:100%;margin-left:0;
+    flex-direction:column;align-items:stretch;
+    border-top:1px solid var(--line);padding-top:8px;
+  }
+  .main-nav.open{display:flex}
+  .main-nav a{padding:9px 10px;border-radius:var(--r-sm)}
+  .search-mini{margin-left:auto}
+  .menu-btn{display:inline-block;order:4}
+  .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .grid-2,.grid-3{grid-template-columns:minmax(0,1fr)}
+  .search-mini input{width:120px}
+  .tight-list li{grid-template-columns:64px minmax(0,1fr);gap:8px}
+  .tight-list .s{grid-column:2;font-size:11.5px}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-stats b{font-size:19px}
+  .cmp{font-size:12.5px}
+  .cmp th,.cmp td{padding:6px 7px}
+  #to-top{width:40px;height:40px;right:12px;bottom:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+  .card:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-stack">
+  <div class="notice" role="note" aria-label="更新公告">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <span><strong>寻剧吧在线观看</strong> 索引更新于 11 月 8 日 06:00：新增《雾港九日》第 9—10 集分集节点，补齐《长夜观星台》英美区上线时间，移除 3 条已下架片源。</span>
+    </div>
+  </div>
+
+  <header class="site-head">
+    <div class="wrap head-inner">
+      <a class="brand" href="/#sec-overview" aria-label="返回首页总览">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#1d2a4a"/>
+          <path d="M17 20h23a6 6 0 0 1 6 6v22H17z" fill="#e8b64c"/>
+          <path d="M30 27l13 7-13 7z" fill="#1d2a4a"/>
+          <rect x="20" y="46" width="26" height="3" rx="1.5" fill="#1d2a4a" opacity=".5"/>
+        </svg>
+        <span class="brand-name">寻剧吧在线观看<span class="brand-sub">JU INDEX</span></span>
+      </a>
+
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="main-nav">菜单</button>
+
+      <nav class="main-nav" id="main-nav" aria-label="主题导航">
+        <a href="/#sec-overview">领域概览</a>
+        <a href="/#sec-picks">精选推荐</a>
+        <a href="/#sec-latest">最新更新</a>
+        <a href="/#sec-channels">分类入口</a>
+        <a href="/#sec-deep">深度解析</a>
+        <a href="/#sec-guide">体验指南</a>
+        <a href="/#sec-faq">常见问答</a>
+        <a href="/#sec-comments">用户评论</a>
+      </nav>
+
+      <form class="search-mini" id="search-form" role="search" aria-label="站内条目查找">
+        <input id="search-input" type="search" name="q" placeholder="搜剧名 / 平台 / 演员" aria-label="输入剧名、平台或演员">
+        <button type="submit">查找</button>
+      </form>
+    </div>
+    <div class="wrap"><div id="search-feedback" role="status" aria-live="polite"></div></div>
+  </header>
+</div>
+
+<div class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="hero-tag">剧集索引 · 分集节点 · 追剧判断</span>
+      <h1>寻剧吧在线观看</h1>
+      <p class="lede">把“哪部能看、看到第几集、值不值得追”拆成可核对的条目。以平台上线时间、集数、豆瓣短评量级和完结状态四项为索引基础，覆盖国产剧、韩剧与英美剧三条主线，每个条目注明信息核实日期。</p>
+      <div class="hero-stats">
+        <div><b>1,264</b><span>在架剧集条目</span></div>
+        <div><b>38</b><span>本周新增节点</span></div>
+        <div><b>3</b><span>语种主线</span></div>
+        <div><b>11·08</b><span>索引核验日</span></div>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-main" href="/#sec-latest">看 11 月 8 日更新</a>
+        <a class="btn btn-ghost" href="/#sec-guide">追剧流程与判断方法</a>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 300" role="img" aria-label="抽象剧集索引构图：一列分集卡片与播放刻度">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#31456f"/><stop offset="1" stop-color="#1d2a4a"/>
+          </linearGradient>
+        </defs>
+        <rect x="8" y="26" width="232" height="150" rx="12" fill="url(#g1)" stroke="#41577f"/>
+        <rect x="24" y="42" width="86" height="8" rx="4" fill="#e8b64c"/>
+        <rect x="24" y="60" width="176" height="6" rx="3" fill="#5b6f96"/>
+        <rect x="24" y="74" width="140" height="6" rx="3" fill="#4a5c80"/>
+        <circle cx="188" cy="120" r="26" fill="none" stroke="#e8b64c" stroke-width="2"/>
+        <path d="M181 109l17 11-17 11z" fill="#e8b64c"/>
+        <g stroke="#e8b64c" stroke-width="2" opacity=".85">
+          <circle cx="60" cy="128" r="5" fill="none"/><circle cx="88" cy="128" r="5" fill="none"/>
+          <circle cx="116" cy="128" r="5" fill="none"/><circle cx="144" cy="128" r="5" fill="none"/>
+        </g>
+        <rect x="256" y="14" width="148" height="34" rx="8" fill="#24344f" stroke="#3d5178"/>
+        <rect x="270" y="25" width="52" height="6" rx="3" fill="#8fa2c4"/>
+        <rect x="270" y="35" width="90" height="4" rx="2" fill="#586a8e"/>
+        <rect x="256" y="60" width="148" height="34" rx="8" fill="#24344f" stroke="#3d5178"/>
+        <rect x="270" y="71" width="66" height="6" rx="3" fill="#8fa2c4"/>
+        <rect x="270" y="81" width="104" height="4" rx="2" fill="#586a8e"/>
+        <rect x="256" y="106" width="148" height="34" rx="8" fill="#2b3d5c" stroke="#4d6289"/>
+        <rect x="270" y="117" width="42" height="6" rx="3" fill="#e8b64c"/>
+        <rect x="270" y="127" width="112" height="4" rx="2" fill="#6b7ea3"/>
+        <rect x="256" y="152" width="148" height="34" rx="8" fill="#24344f" stroke="#3d5178"/>
+        <rect x="270" y="163" width="74" height="6" rx="3" fill="#8fa2c4"/>
+        <rect x="270" y="173" width="58" height="4" rx="2" fill="#586a8e"/>
+        <path d="M24 208h380" stroke="#3a4866" stroke-width="1"/>
+        <g fill="#e8b64c">
+          <rect x="40" y="214" width="30" height="8" rx="4"/>
+          <rect x="82" y="214" width="52" height="8" rx="4" opacity=".7"/>
+          <rect x="146" y="214" width="24" height="8" rx="4" opacity=".5"/>
+          <rect x="182" y="214" width="66" height="8" rx="4" opacity=".8"/>
+        </g>
+        <text x="24" y="252" fill="#8c99b4" font-size="12" font-family="sans-serif">S01E09 · 11·08 上线</text>
+        <text x="256" y="252" fill="#8c99b4" font-size="12" font-family="sans-serif">已核验条目 1,264</text>
+        <circle cx="352" cy="216" r="6" fill="none" stroke="#e8b64c" stroke-width="2"/>
+        <path d="M352 200v-10" stroke="#e8b64c" stroke-width="2"/>
+      </svg>
+      <span class="cap">索引结构：条目 × 分集节点 × 核验状态</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap layout">
+  <main>
+    <!-- 1 领域概览 -->
+    <section class="block" id="sec-overview">
+      <div class="block-head"><span class="kicker">01 / 领域概览</span><h2>国产剧、韩剧、英美剧三条主线怎么分</h2></div>
+      <p class="block-intro">同一部剧在三个地方看到三种信息：平台显示的总集数、播出方公布的排播表、以及第三方条目里的分集标题。三条主线口径不同，混着看容易误判进度。</p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>国产剧：先看备案与排播</h3>
+          <p>都市、悬疑、古装三条供给最密。卫视与视频平台常见“先网后台”，台播版与网播版单集时长可差 3—6 分钟。</p>
+          <p class="meta">代表条目：《雾港九日》《春山邮局》</p>
+        </div>
+        <div class="card">
+          <h3>韩剧：分档与周更节奏</h3>
+          <p>tvN、JTBC、SBS 的金土档、水木档决定了更新日。16 集体量居多，首周常一次放 2 集，之后每周 2 集。</p>
+          <p class="meta">代表条目：《雪线以南》《第七封信》</p>
+        </div>
+        <div class="card">
+          <h3>英美剧：季与集两套坐标</h3>
+          <p>流媒体一次性放出整季与周更混用。看条目时先确认是“季终”还是“季中歇”，两者对判断完结完全不同。</p>
+          <p class="meta">代表条目：《长夜观星台》《锚点站》</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 精选推荐 -->
+    <section class="block" id="sec-picks">
+      <div class="block-head"><span class="kicker">02 / 精选内容推荐</span><h2>本周值得开的三部：按完结度与口碑筛</h2></div>
+      <p class="block-intro">筛选条件写死为三条：已完结或已过半、短评量过 5000、无大面积“弃剧”评价。达不到就不进这个栏目。</p>
+      <div class="grid-2">
+        <div class="card">
+          <span class="pill">悬疑</span><span class="pill teal">全 12 集完结</span>
+          <h3>《雾港九日》——封闭小镇的九日倒计时</h3>
+          <p>导演林砚舟，主演周牧野、许南音。第 6 集起把叙事切成两条时间线，第 11 集有一处关键物证反转。豆瓣条目 11 月 3 日累计短评 1.8 万条，四星以上占比约 61%。</p>
+          <p class="meta">核验：11·06 · 片源：平台 A 独播</p>
+        </div>
+        <div class="card">
+          <span class="pill">家庭</span><span class="pill teal">已完结 16 集</span>
+          <h3>《春山邮局》——小城邮递员的三十年</h3>
+          <p>节奏慢，前 3 集接近生活流。适合连看，单集有效信息密度不高，但第 9 集父亲线收束写得好。适合和长辈一起看的少数近期国产剧。</p>
+          <p class="meta">核验：11·05 · 片源：平台 B、卫视重播</p>
+        </div>
+        <div class="card">
+          <span class="pill">职场</span><span class="pill rose">更新至 8/16</span>
+          <h3>《第七封信》——报社编辑部的选题战</h3>
+          <p>韩剧，JTBC 水木档。第 8 集停在主编换届，追更体验不算友好。若想一次看完，建议等 12 月中旬全剧终后再进。</p>
+          <p class="meta">核验：11·07 · 片源：平台 C 周更</p>
+        </div>
+        <div class="card">
+          <span class="pill">科幻</span><span class="pill rose">季中歇</span>
+          <h3>《长夜观星台》S2——天文台的静默协议</h3>
+          <p>英美剧，S2 前半 6 集已于 10 月 30 日放完，后半要等 2027 年 1 月。第 5 集的长镜头值得单拎出来看，但整季信息量集中在前三集。</p>
+          <p class="meta">核验：11·04 · 片源：平台 D</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 最新更新 -->
+    <section class="block" id="sec-latest">
+      <div class="block-head"><span class="kicker">03 / 最新更新</span><h2>11 月 6 日—8 日分集节点变动</h2></div>
+      <p class="block-intro">只登记有明确上线时间的节点。平台临时调档的，单独标“待定”，不并入时间线。</p>
+      <ul class="tight-list">
+        <li><span class="t">11·08</span><span class="n">《雾港九日》第 9—10 集上线 <small>平台 A，会员可看</small></span><span class="s">已核验</span></li>
+        <li><span class="t">11·08</span><span class="n">《锚点站》S1 第 4 集 <small>平台 D，周更，单集 52 分钟</small></span><span class="s">已核验</span></li>
+        <li><span class="t">11·07</span><span class="n">《第七封信》第 8 集 <small>JTBC 水木档，含预告 1 分 40 秒</small></span><span class="s">已核验</span></li>
+        <li><span class="t">11·07</span><span class="n">《雪线以南》全 16 集上线 <small>平台 C 一次性放出</small></span><span class="s">已核验</span></li>
+        <li><span class="t">11·06</span><span class="n">《春山邮局》卫视版第 30—31 集 <small>与网播版分集切点不同</small></span><span class="s">已核验</span></li>
+        <li><span class="t">11·06</span><span class="n">《长夜观星台》S2 后半档期 <small>暂定 2027 年 1 月，未官宣日</small></span><span class="s">待定</span></li>
+        <li><span class="t">昨天</span><span class="n">下架清理：3 条失效片源 <small>均因授权到期，非条目本身问题</small></span><span class="s">已处理</span></li>
+      </ul>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="block" id="sec-channels">
+      <div class="block-head"><span class="kicker">04 / 分类入口</span><h2>按题材、语种与更新状态找剧</h2></div>
+      <p class="block-intro">入口按实际条目数排序，数字为本期可核验的条目量。点进去是对应列表，不跳外站。</p>
+      <div class="chan-index">
+        <a href="/#sec-deep"><strong>国产悬疑剧</strong><span>214 条 · 平均 12 集</span></a>
+        <a href="/#sec-deep"><strong>韩剧金土档</strong><span>86 条 · 周五周六更</span></a>
+        <a href="/#sec-latest"><strong>已完结一次看完</strong><span>437 条</span></a>
+        <a href="/#sec-picks"><strong>英美剧季中歇</strong><span>41 条 · 需等档期</span></a>
+        <a href="/#sec-guide"><strong>都市生活剧</strong><span>178 条</span></a>
+        <a href="/#sec-guide"><strong>古装权谋剧</strong><span>132 条</span></a>
+        <a href="/#sec-faq"><strong>短剧 12 集以内</strong><span>265 条 · 单集 30 分钟</span></a>
+        <a href="/#sec-comments"><strong>高争议低分剧</strong><span>57 条 · 有明确槽点</span></a>
+        <a href="/#sec-tiers"><strong>信息可信度分层</strong><span>按来源分级</span></a>
+        <a href="/#sec-timeline"><strong>本周上线时间线</strong><span>11·06—11·08</span></a>
+      </div>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="block" id="sec-deep">
+      <div class="block-head"><span class="kicker">05 / 深度解析</span><h2>“集数少就等于节奏快”不成立，判断要看三个中段</h2></div>
+      <article class="deep">
+        <p>近期整理条目时，最常被问到的问题是：12 集的剧是不是一定比 36 集的剧更紧凑。这个说法可以核对，也可以被反驳。《雾港九日》12 集，第 7 集仍然出现了约 9 分钟的重复闪回；《春山邮局》16 集，第 4 集到第 8 集几乎每集推进一条新的家庭矛盾。集数只是容器，节奏取决于中段有没有新事实。</p>
+
+        <h3>一、看第 2—3 集是否建立“每集一个问题”</h3>
+        <p>《雾港九日》第 2 集给出失踪者最后出现在渔市的时间，第 3 集推翻这个时间，改为码头监控显示的 23 时 41 分。两集各解决一个可核对的问题，这种结构比总集数更能说明节奏。反过来，《锚点站》S1 前 3 集只做世界观陈列，第 4 集才第一次出现利益冲突，它的 8 集体量掩盖不了开始的拖。</p>
+        <div class="pull-quote">可被引用的判断：把“单集是否新增一个可核对的疑问或答案”作为节奏指标，比看集数稳定。依据是《雾港九日》1—4 集与《锚点站》1—4 集在豆瓣短评中“注水”关键词出现频次相差约 4 倍。</div>
+
+        <h3>二、中段是否换过一次叙述视角</h3>
+        <p>《第七封信》前 6 集以编辑部主任视角推进，第 7 集切到实习记者，同一场选题会发生两套说法：主任说是“为保护线人”，实习记者的记录里写着“主编要求撤稿”。两套说法并存，观众才有得判断。没有视角切换的剧，中段容易只剩情绪叠加。</p>
+
+        <table class="cmp">
+          <caption>三组对照：集数、中段视角切换、完结状态（核验日 11·07）</caption>
+          <thead><tr><th>条目</th><th>集数</th><th>中段视角切换</th><th>完结状态</th></tr></thead>
+          <tbody>
+            <tr><td>《雾港九日》</td><td>12</td><td>第 6 集起双时间线</td><td>已完结</td></tr>
+            <tr><td>《第七封信》</td><td>16</td><td>第 7 集切实习记者</td><td>更新至 8 集</td></tr>
+            <tr><td>《锚点站》</td><td>8</td><td>无，单视角到底</td><td>S1 完结</td></tr>
+          </tbody>
+        </table>
+
+        <h3>三、结尾前 2 集有没有回收前文的具体物件</h3>
+        <p>《春山邮局》第 15 集回收了第 2 集出现的旧邮戳，第 16 集回收第 1 集的自行车铃。这类物件回收是可核对的，不需要靠观感。《长夜观星台》S2 前半留下 3 个未回收道具，所以后半的期待值被抬高，也是它档期一拖再拖后争议变大的原因之一。需要说明：后半延档目前只有播出方的一次口径，属于推测层，未获第二来源确认。</p>
+
+        <h3>四、把判断拆成可核对项</h3>
+        <p>与其争论“好不好看”，不如把这四条写下来逐项打勾。条目信息里能查到的部分，一旦与观感相反，优先相信可查的那一项。</p>
+        <ul class="verify">
+          <li><span class="chk">✓</span><span>单集概述里是否出现新的时间、地点或人物关系</span></li>
+          <li><span class="chk">✓</span><span>第 2—3 集有没有推翻前一集给出的关键信息</span></li>
+          <li><span class="chk">✓</span><span>中段是否出现过叙述视角或立场不同的角色</span></li>
+          <li><span class="chk">✗</span><span>结尾两集是否回收前文具体物件（未回收不代表失败，但需另找理由）</span></li>
+          <li><span class="chk">✓</span><span>平台显示的集数与播出方排播表是否一致</span></li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="block" id="sec-guide">
+      <div class="block-head"><span class="kicker">06 / 体验指南</span><h2>从“想看”到“看完”的五步</h2></div>
+      <p class="block-intro">流程按真实操作顺序排，每一步都对应一个能在条目里查到的字段，不靠感觉。</p>
+      <ol class="steps">
+        <li><b>先定状态。</b>在条目顶部确认“更新中 / 已完结 / 季中歇”。季中歇的剧不建议当作睡前连看。</li>
+        <li><b>核对集数与单集时长。</b>《雾港九日》单集 46 分钟，《春山邮局》卫视版单集 41 分钟，两者总时长差约 1 小时 20 分。</li>
+        <li><b>看第 2—3 集的分集概述再决定。</b>概述里若只有人物名和情绪词，多半是铺垫集。</li>
+        <li><b>确认片源与版本。</b>台播版与网播版的分集切点可能不同，先看条目里的“版本差异”备注。</li>
+        <li><b>记录看到第几集。</b>周更剧跨周容易断，条目里的分集节点可以直接对照。</li>
+      </ol>
+      <div class="grid-2" style="margin-top:14px">
+        <div class="card">
+          <h3>适合连看的两类</h3>
+          <p>已完结且单集 45 分钟以内的 12 集体量；一次放出整季的英美剧。前者适合周末两天，后者适合长途出行。</p>
+        </div>
+        <div class="card">
+          <h3>不建议连看的两类</h3>
+          <p>季中歇且后半无明确档期的；周更且每集结尾都留强钩子的。后者容易累积焦虑感，也和观看体验无关。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="block" id="sec-faq">
+      <div class="block-head"><span class="kicker">07 / 常见问答</span><h2>关于更新、版本与集数的七个问题</h2></div>
+      <details class="faq" open>
+        <summary>《雾港九日》一共几集，现在更新到第几集？</summary>
+        <div class="ans">全 12 集，11 月 8 日已上线第 9—10 集，剩余 2 集按平台 A 的排播在 11 月 12 日放出。条目内分集节点按上线时间排序，可直接对照。</div>
+      </details>
+      <details class="faq">
+        <summary>台播版和网播版的分集差异会影响剧情理解吗？</summary>
+        <div class="ans">《春山邮局》两个版本单集切点相差 1—2 场戏，关键情节一致。差异集中在片头片尾长度与广告切口，按任一版本看都不影响主线。</div>
+      </details>
+      <details class="faq">
+        <summary>《长夜观星台》S2 现在是完结还是停更？</summary>
+        <div class="ans">属于季中歇。S2 前半 6 集已于 10 月 30 日放完，后半档期播出方口径为 2027 年 1 月，具体日期未公布，条目内标“待定”。</div>
+      </details>
+      <details class="faq">
+        <summary>韩剧金土档和水木档分别指哪几天更新？</summary>
+        <div class="ans">金土档为周五、周六，水木档为周三、周四。《第七封信》属水木档，因此 11 月 7 日更新的是第 8 集，下一集在 11 月 13 日。</div>
+      </details>
+      <details class="faq">
+        <summary>条目里的“已核验”具体核了什么？</summary>
+        <div class="ans">核三项：平台在架状态、分集上线时间、集数与播出方公布是否一致。口碑数据只做参考，不计入核验结论。</div>
+      </details>
+      <details class="faq">
+        <summary>为什么有的剧显示下架，但条目还在？</summary>
+        <div class="ans">片源授权到期与条目本身是两件事。11 月 6 日清理的 3 条属于授权到期，条目保留并在片源栏注明，方便后续恢复时对照。</div>
+      </details>
+      <details class="faq">
+        <summary>短剧 12 集以内值得单独找吗？</summary>
+        <div class="ans">值得，但要先看单集时长。近期 12 集条目里有单集 22 分钟的，也有单集 50 分钟的，前者更适合工作日晚间看一集。</div>
+      </details>
+    </section>
+
+    <!-- 8 用户评论 -->
+    <section class="block" id="sec-comments">
+      <div class="block-head"><span class="kicker">08 / 用户评论</span><h2>近期条目下被点赞较多的几条</h2></div>
+      <div class="cmt">
+        <div class="cmt-head"><span class="avatar">陆</span><span class="who">陆行舟</span><span class="when">11·08 09:12</span></div>
+        <p><span class="quote-ref">《雾港九日》第 9 集</span> 渔市那段重拍了两遍，第一遍是白天，第二遍改成凌晨，光一换整个气氛就不一样。第 10 集的物证出现得太顺，稍微有点“编剧帮忙”的意思。</p>
+      </div>
+      <div class="cmt">
+        <div class="cmt-head"><span class="avatar">阿</span><span class="who">阿棠不吃鱼</span><span class="when">11·07 22:40</span></div>
+        <p><span class="quote-ref">《第七封信》第 8 集</span> 停得不是地方。主编换届这件事前 3 集就在铺垫，结果一集解决，反而显得前面铺垫白费。等完结再说吧。</p>
+      </div>
+      <div class="cmt">
+        <div class="cmt-head"><span class="avatar">林</span><span class="who">林下风</span><span class="when">11·07 16:05</span></div>
+        <p>《春山邮局》陪我妈看的，她看到第 15 集那个邮戳直接哭了。我自己看的话可能第 5 集就弃了，节奏确实慢。两种看法都成立。</p>
+      </div>
+      <div class="cmt">
+        <div class="cmt-head"><span class="avatar">K</span><span class="who">Kevin_Z</span><span class="when">11·06 20:31</span></div>
+        <p><span class="quote-ref">《长夜观星台》S2</span> 前半留三个道具不解释，然后让我等一年半？单集质量没问题，但这个排播方式不太友好。第 5 集的长镜头确实值回票价。</p>
+      </div>
+      <div class="cmt">
+        <div class="cmt-head"><span class="avatar">石</span><span class="who">石头记不动</span><span class="when">11·06 11:18</span></div>
+        <p>《锚点站》前三集真的看不下去，第 4 集才有点意思。8 集的体量还这么磨，不太理解。</p>
+      </div>
+      <div class="cmt">
+        <div class="cmt-head"><span class="avatar">周</span><span class="who">周末不加班</span><span class="when">11·05 21:47</span></div>
+        <p><span class="quote-ref">《雪线以南》</span> 一次放 16 集，周末两天刷完。第 11 集的反转有点硬，但整体比预期好，尤其是配角戏。</p>
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="block" id="sec-news">
+      <div class="block-head"><span class="kicker">09 / 相关资讯</span><h2>排播、档期与授权变动</h2></div>
+      <p class="block-intro">只收录能对上具体日期与来源口径的变动，传闻与推测另起一行标注。</p>
+      <ul class="tight-list">
+        <li><span class="t">11·08</span><span class="n">平台 A 公布 11 月会员排播表 <small>《雾港九日》收官定在 11 月 12 日</small></span><span class="s">事实</span></li>
+        <li><span class="t">11·07</span><span class="n">JTBC 水木档 12 月调整 <small>《第七封信》是否顺延未回应</small></span><span class="s">回应</span></li>
+        <li><span class="t">11·06</span><span class="n">平台 D 客服口径：S2 后半“仍在后期” <small>未给日期</small></span><span class="s">转述</span></li>
+        <li><span class="t">11·05</span><span class="n">《雪线以南》编剧访谈 <small>提到第 11 集反转在两年前定稿</small></span><span class="s">事实</span></li>
+        <li><span class="t">11·04</span><span class="n">业内账号称“长夜后半将提档” <small>无第二来源，暂不入档期表</small></span><span class="s">推测</span></li>
+      </ul>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="block" id="sec-relate">
+      <div class="block-head"><span class="kicker">10 / 相关推荐</span><h2>按你正在看的剧匹配</h2></div>
+      <p class="block-intro">标签取自用户搜索时最常输入的词，点标签只看同类条目。</p>
+      <div class="tag-index">
+        <a href="/#sec-picks">封闭小镇悬疑剧</a>
+        <a href="/#sec-picks">12 集以内短剧</a>
+        <a href="/#sec-latest">已完结国产剧</a>
+        <a href="/#sec-channels">韩剧金土档</a>
+        <a href="/#sec-deep">双时间线叙事剧</a>
+        <a href="/#sec-guide">适合和长辈一起看</a>
+        <a href="/#sec-comments">高争议低分剧</a>
+        <a href="/#sec-news">季中歇英美剧</a>
+        <a href="/#sec-timeline">本周上线剧集</a>
+      </div>
+      <div class="grid-2" style="margin-top:14px">
+        <div class="card">
+          <h3>看完《雾港九日》可以接</h3>
+          <p>《第七封信》的报社线索与小镇悬疑气质接近，但更新未完结。《锚点站》S1 更适合当晚就看完。</p>
+        </div>
+        <div class="card">
+          <h3>不喜欢慢节奏可以避开</h3>
+          <p>《春山邮局》前 3 集接近生活流纪录；《长夜观星台》S2 前三集为世界观陈列。都不适合碎片时间。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 可信度分层 -->
+    <section class="block" id="sec-tiers">
+      <div class="block-head"><span class="kicker">11 / 补充板块 · 可信度分层</span><h2>同一条剧集信息，来源不同权重不同</h2></div>
+      <p class="block-intro">分层只针对“上线时间与集数”这类可核对事实，不评价剧集好坏。</p>
+      <div class="tiers">
+        <div class="tier a">
+          <h3>A 级：平台官方排播页</h3>
+          <p>可直接对照，冲突时以此为准。</p>
+          <ul><li>平台 A 会员排播表</li><li>JTBC 官方节目表</li></ul>
+        </div>
+        <div class="tier b">
+          <h3>B 级：播出方回应与访谈</h3>
+          <p>有口径但缺具体日期，需二次确认。</p>
+          <ul><li>平台 D 客服回复</li><li>编剧访谈中的时间线</li></ul>
+        </div>
+        <div class="tier c">
+          <h3>C 级：账号转述与推测</h3>
+          <p>仅作线索，不进档期表。</p>
+          <ul><li>业内账号的提档说法</li><li>未署名的档期截图</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12 时间线 -->
+    <section class="block" id="sec-timeline">
+      <div class="block-head"><span class="kicker">12 / 补充板块 · 时间线</span><h2>11 月 1 日到 8 日的事件顺序</h2></div>
+      <ul class="timeline">
+        <li><span class="d">11·01</span><b>平台 C 宣布《雪线以南》全 16 集</b><p>同步公布单集 43 分钟，非会员延后 7 天。</p></li>
+        <li><span class="d">11·03</span><b>《雾港九日》短评破 1.5 万</b><p>四星以上占比约 61%，第 6 集后讨论量明显上升。</p></li>
+        <li><span class="d">11·05</span><b>《雪线以南》编剧访谈发布</b><p>提到第 11 集反转两年前定稿，与拍摄顺序无关。</p></li>
+        <li><span class="d">11·06</span><b>平台清理 3 条失效片源</b><p>均为授权到期，条目保留并加注说明。</p></li>
+        <li><span class="d">11·07</span><b>《第七封信》第 8 集上线</b><p>停点在主编换届，下一集 11 月 13 日。</p></li>
+        <li><span class="d">11·08</span><b>《雾港九日》第 9—10 集</b><p>收官定 11 月 12 日，平台 A 会员可看。</p></li>
+      </ul>
+    </section>
+  </main>
+
+  <aside aria-label="侧栏导航与索引">
+    <div class="side-card">
+      <h2>本页栏目</h2>
+      <ul class="side-nav" id="side-nav">
+        <li><a href="/#sec-overview">01 领域概览</a></li>
+        <li><a href="/#sec-picks">02 精选推荐</a></li>
+        <li><a href="/#sec-latest">03 最新更新</a></li>
+        <li><a href="/#sec-channels">04 分类入口</a></li>
+        <li><a href="/#sec-deep">05 深度解析</a></li>
+        <li><a href="/#sec-guide">06 体验指南</a></li>
+        <li><a href="/#sec-faq">07 常见问答</a></li>
+        <li><a href="/#sec-comments">08 用户评论</a></li>
+        <li><a href="/#sec-news">09 相关资讯</a></li>
+        <li><a href="/#sec-relate">10 相关推荐</a></li>
+        <li><a href="/#sec-tiers">11 可信度分层</a></li>
+        <li><a href="/#sec-timeline">12 时间线</a></li>
+      </ul>
+    </div>
+
+    <div class="side-card">
+      <h2>本周条目热度</h2>
+      <ol class="mini-rank">
+        <li>雾港九日</li>
+        <li>雪线以南</li>
+        <li>第七封信</li>
+        <li>春山邮局</li>
+        <li>长夜观星台 S2</li>
+        <li>锚点站 S1</li>
+      </ol>
+      <p class="side-note">热度按条目页停留时长与分集节点点击量计算，11 月 8 日 06:00 快照。</p>
+    </div>
+
+    <div class="side-card">
+      <h2>按状态筛选</h2>
+      <div class="tag-index">
+        <a href="/#sec-latest">已完结</a>
+        <a href="/#sec-latest">更新中</a>
+        <a href="/#sec-news">季中歇</a>
+        <a href="/#sec-news">档期待定</a>
+        <a href="/#sec-comments">已下架片源</a>
+      </div>
+      <p class="side-note">状态字段每天核对一次，与正文分集节点同源。</p>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#24344f"/>
+            <path d="M17 20h23a6 6 0 0 1 6 6v22H17z" fill="#e8b64c"/>
+            <path d="M30 27l13 7-13 7z" fill="#24344f"/>
+          </svg>
+          <strong>寻剧吧在线观看</strong>
+        </div>
+        <p class="foot-pos">把上线时间、分集节点与版本差异写进条目，让追剧判断有据可查。站内不提供片源，只做索引与核验记录。</p>
+      </div>
+      <div>
+        <h4>栏目</h4>
+        <ul>
+          <li><a href="/#sec-overview">领域概览</a></li>
+          <li><a href="/#sec-picks">精选推荐</a></li>
+          <li><a href="/#sec-latest">最新更新</a></li>
+          <li><a href="/#sec-deep">深度解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>查找</h4>
+        <ul>
+          <li><a href="/#sec-channels">分类入口</a></li>
+          <li><a href="/#sec-faq">常见问答</a></li>
+          <li><a href="/#sec-relate">相关推荐</a></li>
+          <li><a href="/#sec-tiers">可信度分层</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>说明</h4>
+        <ul>
+          <li><a href="/#sec-timeline">时间线</a></li>
+          <li><a href="/#sec-news">相关资讯</a></li>
+          <li><a href="/#sec-comments">用户评论</a></li>
+        </ul>
+        <p class="side-note" style="color:#7f889b">条目内容含示例数据，剧名、人物与档期以平台公告为准。页脚更新时间 11·08，对应正文“最新更新”与“时间线”两处可核对条目。</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 寻剧吧在线观看 · 索引内容仅供参考</span>
+      <span><span class="dotsep">·</span> 最后核对：2026-11-08 06:00 <span class="dotsep">·</span> 条目数据含示例成分</span>
+    </div>
+  </div>
+</footer>
+
+<button id="to-top" type="button" aria-label="回到顶部">↑</button>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"寻剧吧在线观看",
+  "description":"整理国产剧、韩剧与英美剧集索引，含分集更新节点、题材分类入口与追剧判断方法。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"《雾港九日》一共几集，现在更新到第几集？","acceptedAnswer":{"@type":"Answer","text":"全 12 集，11 月 8 日已上线第 9—10 集，剩余 2 集按平台 A 的排播在 11 月 12 日放出。"}},
+    {"@type":"Question","name":"台播版和网播版的分集差异会影响剧情理解吗？","acceptedAnswer":{"@type":"Answer","text":"《春山邮局》两个版本单集切点相差 1—2 场戏，关键情节一致，按任一版本看都不影响主线。"}},
+    {"@type":"Question","name":"《长夜观星台》S2 现在是完结还是停更？","acceptedAnswer":{"@type":"Answer","text":"属于季中歇，前半 6 集已于 10 月 30 日放完，后半档期播出方口径为 2027 年 1 月，具体日期未公布。"}},
+    {"@type":"Question","name":"韩剧金土档和水木档分别指哪几天更新？","acceptedAnswer":{"@type":"Answer","text":"金土档为周五、周六，水木档为周三、周四。《第七封信》属水木档，11 月 7 日更新第 8 集。"}},
+    {"@type":"Question","name":"条目里的“已核验”具体核了什么？","acceptedAnswer":{"@type":"Answer","text":"核三项：平台在架状态、分集上线时间、集数与播出方公布是否一致。"}}
+  ]
+}
+</script>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menu-btn');
+  var nav = document.getElementById('main-nav');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 960){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  // 搜索：本地查找，覆盖标题、正文卡片与列表条目
+  var form = document.getElementById('search-form');
+  var input = document.getElementById('search-input');
+  var fb = document.getElementById('search-feedback');
+  var pool = [];
+  document.querySelectorAll('main .card h3, main .tight-list .n, main .chan-index strong, main .tag-index a, main .cmt p, main .side-card h2, footer p').forEach(function(el){
+    var text = el.textContent.replace(/\s+/g,' ').trim();
+    if(text){ pool.push({text:text, el:el}); }
+  });
+
+  function findTarget(el){
+    var node = el;
+    while(node && node !== document.body){
+      if(node.id && node.id.indexOf('sec-') === 0) return node.id;
+      if(node.tagName === 'SECTION' && node.id) return node.id;
+      node = node.parentElement;
+    }
+    return null;
+  }
+
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var q = (input.value || '').trim();
+      if(!q){ fb.textContent = '请输入剧名、平台或演员名再查找。'; return; }
+      var hits = pool.filter(function(item){ return item.text.indexOf(q) !== -1; });
+      if(!hits.length){
+        fb.innerHTML = '未找到与 <b>' + q.replace(/[<>&]/g,'') + '</b> 匹配的条目。可换用平台名、集数或题材词，例如“金土档”“12 集”。';
+        return;
+      }
+      var t = findTarget(hits[0].el);
+      fb.textContent = '找到 ' + hits.length + ' 条匹配，已定位到首条：' + hits[0].text.slice(0,40) + '。';
+      if(t){
+        var target = document.getElementById(t);
+        if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  }
+
+  // 侧栏滚动高亮
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
+  var links = Array.prototype.slice.call(document.querySelectorAll('#side-nav a'));
+  function highlight(){
+    var pos = window.scrollY + 160;
+    var current = sections[0] ? sections[0].id : null;
+    sections.forEach(function(s){ if(s.offsetTop <= pos) current = s.id; });
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '/#' + current);
+    });
+  }
+  window.addEventListener('scroll', highlight, {passive:true});
+  window.addEventListener('resize', highlight);
+  highlight();
+
+  // 回到顶部
+  var topBtn = document.getElementById('to-top');
+  function toggleTop(){
+    topBtn.classList.toggle('show', window.scrollY > 620);
+  }
+  window.addEventListener('scroll', toggleTop, {passive:true});
+  toggleTop();
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+  </html>
